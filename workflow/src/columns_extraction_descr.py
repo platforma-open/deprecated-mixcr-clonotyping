@@ -18,8 +18,10 @@ fields_to_columns = {'-cloneId': 'cloneId',
                      '-topChains': 'topChains',
                      '-isotype' : 'isotype'
                      }
-skipped_fields = ['-allNFeaturesWithMinQuality', '-allAAFeatures', '-defaultAnchorPoints']
-cols = []
+skipped_fields = ['-allNFeaturesWithMinQuality', '-allAAFeatures', '-defaultAnchorPoints', '-vHitsWithScore',
+                  '-dHitsWithScore', '-jHitsWithScore', '-cHitsWithScore', '-vAlignments', '-dAlignments',
+                  '-jAlignments', '-cAlignments']
+cols = ['allVHits', 'allDHits', 'allJHits', 'allCHits']
 preset_fields_to_columns = {''}
 for field in preset['exportClone']['fields']:
     if field['field'] not in skipped_fields:
