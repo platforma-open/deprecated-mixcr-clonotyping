@@ -95,7 +95,7 @@
     }, {
       "column": "allVHits",
       "id": "all-v-hits",
-      "allowNA": true,
+      "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/vHits",
         "type": "String",
@@ -116,7 +116,7 @@
     }, {
       "column": "allJHits",
       "id": "all-j-hits",
-      "allowNA": true,
+      "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/jHits",
         "type": "String",
