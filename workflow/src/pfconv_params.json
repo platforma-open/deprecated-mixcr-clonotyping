@@ -21,7 +21,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/cellGroup",
-        "type": "Long",
+        "valueType": "Long",
         "annotations": {
           "pl7.app/label": "Cell group number"
         }
@@ -32,7 +32,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/readCount",
-        "type": "Long",
+        "valueType": "Long",
         "annotations": {
           "pl7.app/label": "Number Of Reads"
         }
@@ -43,7 +43,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/readFraction",
-        "type": "Float",
+        "valueType": "Float",
         "annotations": {
           "pl7.app/label": "Fraction of reads"
         }
@@ -54,7 +54,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/uniqueMoleculeCount",
-        "type": "Long",
+        "valueType": "Long",
         "annotations": {
           "pl7.app/label": "Number of UMI"
         }
@@ -65,7 +65,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/uniqueMoleculeFraction",
-        "type": "Float",
+        "valueType": "Float",
         "annotations": {
           "pl7.app/label": "Fraction of UMI"
         }
@@ -76,7 +76,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/clonalSequences",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Clonal sequences"
         }
@@ -87,7 +87,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/clonalQualities",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Clonal qualities"
         }
@@ -98,7 +98,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/vHits",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "All V hits"
         }
@@ -108,7 +108,7 @@
       "id": "all-d-hits",
       "spec": {
         "name": "pl7.app/vdj/dHits",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "All D hits"
         }
@@ -119,7 +119,7 @@
       "allowNA": false,
       "spec": {
         "name": "pl7.app/vdj/jHits",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "All J hits"
         }
@@ -129,7 +129,7 @@
       "id": "all-c-hits",
       "spec": {
         "name": "pl7.app/vdj/cHits",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "All C hits"
         }
@@ -139,7 +139,7 @@
       "id": "n-seq-fr1",
       "spec": {
         "name": "pl7.app/vdj/nSeqFR1",
-        "type": "String",
+        "valueType": "String",
         "domain": {
           "pl7.app/vdj/feature": "FR1"
         },
@@ -152,7 +152,7 @@
       "id": "min-qual-fr1",
       "spec": {
         "name": "pl7.app/vdj/minQualFR1",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Min quality FR1"
         }
@@ -162,7 +162,7 @@
       "id": "n-seq-fr2",
       "spec": {
         "name": "pl7.app/vdj/nSeqFR2",
-        "type": "String",
+        "valueType": "String",
         "domain": {
           "pl7.app/vdj/feature": "FR2"
         },
@@ -175,7 +175,7 @@
       "id": "min-qual-fr2",
       "spec": {
         "name": "pl7.app/vdj/minQualFR2",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Min quality FR2"
         }
@@ -185,7 +185,7 @@
       "id": "n-seq-fr3",
       "spec": {
         "name": "pl7.app/vdj/nSeqFR3",
-        "type": "String",
+        "valueType": "String",
         "domain": {
           "pl7.app/vdj/feature": "FR3"
         },
@@ -198,7 +198,7 @@
       "id": "min-qual-fr3",
       "spec": {
         "name": "pl7.app/vdj/minQualFR3",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Min quality FR3"
         }
@@ -208,7 +208,7 @@
       "id": "n-seq-fr4",
       "spec": {
         "name": "pl7.app/vdj/nSeqFR4",
-        "type": "String",
+        "valueType": "String",
         "domain": {
           "pl7.app/vdj/feature": "FR4"
         },
@@ -221,7 +221,7 @@
       "id": "min-qual-fr4",
       "spec": {
         "name": "pl7.app/vdj/minQualFR4",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Min quality FR4"
         }
@@ -231,7 +231,7 @@
       "id": "n-seq-cdr1",
       "spec": {
         "name": "pl7.app/vdj/nSeqCDR1",
-        "type": "String",
+        "valueType": "String",
         "domain": {
           "pl7.app/vdj/feature": "CDR1"
         },
@@ -244,7 +244,7 @@
       "id": "min-qual-cdr1",
       "spec": {
         "name": "pl7.app/vdj/minQualCDR1",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Min quality CDR1"
         }
@@ -254,7 +254,7 @@
       "id": "n-seq-cdr2",
       "spec": {
         "name": "pl7.app/vdj/nSeqCDR2",
-        "type": "String",
+        "valueType": "String",
         "domain": {
           "pl7.app/vdj/feature": "CDR2"
         },
@@ -267,7 +267,7 @@
       "id": "min-qual-cdr2",
       "spec": {
         "name": "pl7.app/vdj/minQualCDR2",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Min quality CDR2"
         }
@@ -276,7 +276,7 @@
       "column": "nSeqCDR3",
       "id": "n-seq-cdr3",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/nSeqCDR3",
         "domain": {
           "pl7.app/vdj/feature": "CDR3"
@@ -290,7 +290,7 @@
       "id": "min-qual-cdr3",
       "spec": {
         "name": "pl7.app/vdj/minQualCDR3",
-        "type": "String",
+        "valueType": "String",
         "annotations": {
           "pl7.app/label": "Min quality CDR3"
         }
@@ -299,7 +299,7 @@
       "column": "aaSeqFR1",
       "id": "aa-seq-fr1",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/aaSeqFR1",
         "domain": {
           "pl7.app/vdj/feature": "FR1"
@@ -312,7 +312,7 @@
       "column": "aaSeqFR2",
       "id": "aa-seq-fr2",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/aaSeqFR2",
         "domain": {
           "pl7.app/vdj/feature": "FR2 AA"
@@ -325,7 +325,7 @@
       "column": "aaSeqFR3",
       "id": "aa-seq-fr3",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/aaSeqFR3",
         "domain": {
           "pl7.app/vdj/feature": "FR3"
@@ -338,7 +338,7 @@
       "column": "aaSeqFR4",
       "id": "aa-seq-fr4",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/aaSeqFR4",
         "domain": {
           "pl7.app/vdj/feature": "FR4"
@@ -351,7 +351,7 @@
       "column": "aaSeqCDR1",
       "id": "aa-seq-cdr1",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/aaSeqCDR1",
         "domain": {
           "pl7.app/vdj/feature": "CDR1"
@@ -364,7 +364,7 @@
       "column": "aaSeqCDR2",
       "id": "aa-seq-cdr2",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/aaSeqCDR2",
         "domain": {
           "pl7.app/vdj/feature": "CDR2"
@@ -377,7 +377,7 @@
       "column": "aaSeqCDR3",
       "id": "aa-seq-cdr3",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/aaSeqCDR3",
         "domain": {
           "pl7.app/vdj/feature": "CDR3"
@@ -390,7 +390,7 @@
       "column": "isotype",
       "id": "isotype",
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/isotype",
         "annotations": {
           "pl7.app/label": "IG isotype"
@@ -401,7 +401,7 @@
       "id": "top-chains",
       "allowNA": false,
       "spec": {
-        "type": "String",
+        "valueType": "String",
         "name": "pl7.app/vdj/chain",
         "annotations": {
           "pl7.app/label": "Chain"
