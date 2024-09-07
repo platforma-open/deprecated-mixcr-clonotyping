@@ -1,7 +1,7 @@
 // calculate-pfconv-params
 self := import("@milaboratory/tengo-sdk:tpl")
 
-pvconfParams := import(":pfconv_params")
+pfconvParams := import(":pfconv_params")
 
 json := import("json")
 
@@ -63,19 +63,19 @@ self.body(func(inputs) {
 		}
 	}
 
-	// filter pvconfParams by column name and get a list of fields from it
+	// filter pfconvParams by column name and get a list of fields from it
 	columns := []
 	for col in columnsList {
-		getColumn := filter(pvconfParams.columns, func(item) { return item.column ==  col})
+		getColumn := filter(pfconvParams.columns, func(item) { return item.column ==  col})
 		columns += getColumn
 	}
 
 	// create axes fields
 	axes := []
 	if len(specs.cellTags) == 0 {
-		axes = filter(pvconfParams.axes, func(item) { return item.column == "cloneId" })
+		axes = filter(pfconvParams.axes, func(item) { return item.column == "cloneId" })
 	} else {
-		axes = pvconfParams.axes
+		axes = pfconvParams.axes
 	}
 
 	return {
