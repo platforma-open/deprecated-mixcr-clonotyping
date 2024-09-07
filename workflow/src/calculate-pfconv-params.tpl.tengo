@@ -1,13 +1,25 @@
 // calculate-pfconv-params
 self := import("@milaboratory/tengo-sdk:tpl")
+// validation := import("@milaboratory/tengo-sdk:validation")
 
-pfconvParams := import(":pfconv_params")
+pfconvParamsLib := import(":pfconv_params")
 
 json := import("json")
+
+// self.validateInputs({
+// 	"__options__,closed": "",
+// 	"request": {
+// 		"__options__,closed": "",
+// 		"blockId": ["not", validation.resource()],
+// 		"specs,omitempty": ["not", validation.resource()]
+// 	}
+// })
 
 self.defineOutputs("params")
 
 self.body(func(inputs) {
+
+	blockId := inputs.blockId
 
 	// filter function
 	filter := func(list, predicate) {
@@ -33,6 +45,7 @@ self.body(func(inputs) {
 	// get specs and preset data
 	specs := inputs.specs.getDataAsJson()
 	preset := inputs.preset.getDataAsJson()
+
 	//if using readCount or umiCount
 	columnsList := []
 	columnsOrder := []
@@ -64,6 +77,8 @@ self.body(func(inputs) {
 	}
 
 	// filter pfconvParams by column name and get a list of fields from it
+	pfconvParams := pfconvParamsLib.getColumns(blockId)
+
 	columns := []
 	for col in columnsList {
 		getColumn := filter(pfconvParams.columns, func(item) { return item.column ==  col})
