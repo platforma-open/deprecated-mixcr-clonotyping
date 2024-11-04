@@ -52,8 +52,8 @@ catalogs:
       specifier: ^1.7.36
       version: 1.7.36
     '@platforma-sdk/ui-vue':
-      specifier: ^1.7.36
-      version: 1.7.36
+      specifier: ^1.7.40
+      version: 1.7.40
     '@platforma-sdk/workflow-tengo':
       specifier: ^1.7.2
       version: 1.7.2
@@ -190,7 +190,7 @@ importers:
         version: 1.7.20
       '@platforma-sdk/ui-vue':
         specifier: 'catalog:'
-        version: 1.7.36(typescript@5.5.4)
+        version: 1.7.40(typescript@5.5.4)
       '@vueuse/core':
         specifier: 'catalog:'
         version: 11.2.0(vue@3.5.12(typescript@5.5.4))
@@ -263,6 +263,9 @@ packages:
 
   '@ag-grid-community/styles@32.3.2':
     resolution: {integrity: sha512-zAimgm2bORRNDegPnhopYx0s3017j12m9h6Fv3KKW+CSpjHh4U+5ykacrsp8vN6f2vecRxXbrDl8gJC8hCJdcg==}
+
+  '@ag-grid-community/theming@32.3.2':
+    resolution: {integrity: sha512-JTi3r2TpHPHPgbBUQh87OysKD7VfIXrCUKiQxX3OiWJXutX0D0H6eAFwP4C83ourCMRIeZgBqCLhK+TMyzlKJw==}
 
   '@ag-grid-community/vue3@32.3.2':
     resolution: {integrity: sha512-jv1i1OIhybPJOLV5Mc32VPbjFqRK6Mo4pA2+gsgoK8mQRYSus3iX4lwkyYtApOPBkUVTbyz0zBui/jkDAOHz0A==}
@@ -940,8 +943,8 @@ packages:
   '@milaboratories/ts-helpers@1.1.0':
     resolution: {integrity: sha512-nbGUetdEc47wX/btCANxOggHC4xzrD1f9ibZLLTIYVVOokzdVOVbZ9Qv+78TF1G15Sq7lgvqXr/BjYxGSCCO3g==}
 
-  '@milaboratories/uikit@2.0.3':
-    resolution: {integrity: sha512-OToLr6qobYQopNmbikmMrkp/Pi23eYZ4mW6OH1TZaK4KE+K9a0q+3peVHtXxZUPivIFORCAdpLKus9IqAURDrQ==}
+  '@milaboratories/uikit@2.0.4':
+    resolution: {integrity: sha512-k6EPpNjvPTuzUzh0KQ6iT6SKtxIBLmeZJE8P6vne+HGl6KJrpwmtneKDIP5dxLrm6IyAV9UJE5tgvQyJMKgD7A==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -995,8 +998,8 @@ packages:
   '@platforma-sdk/test@1.7.36':
     resolution: {integrity: sha512-Sjch1JGNljQ4ouxO+AXQGtWIwKUx+dE9N5TNGTnx8XFZdjJm6E98nKvQyB/WOjaJYBFVhfN6Gh0D4/aDaHFoYg==}
 
-  '@platforma-sdk/ui-vue@1.7.36':
-    resolution: {integrity: sha512-9uNpYcUGuDAsDlQbfV1zNqKLevWhXZTaoFeuvZvQWVBIiHIz3B3P2OaJrMu5lc2CbGU1ynT74vwt/pcQx3CKWw==}
+  '@platforma-sdk/ui-vue@1.7.40':
+    resolution: {integrity: sha512-TqE0Fg0tiK53OmFxVWVquTUnAkTAxptAmiPQD50X3rvQsLJR0yNLJwglOtzh/biZGiMtmVwG+map+MrdSNhEGg==}
 
   '@platforma-sdk/workflow-tengo@1.7.2':
     resolution: {integrity: sha512-Ss6lFmXY8r/L9J1V+Fa6WSwgw2MUC5BAU7co+ye9do04wKhE9GsBslePmpxIddE+F4C+zmx5vvc3AnmpOSdSFw==}
@@ -2997,6 +3000,11 @@ snapshots:
 
   '@ag-grid-community/styles@32.3.2': {}
 
+  '@ag-grid-community/theming@32.3.2':
+    dependencies:
+      '@ag-grid-community/core': 32.3.2
+      tslib: 2.7.0
+
   '@ag-grid-community/vue3@32.3.2(typescript@5.5.4)':
     dependencies:
       '@ag-grid-community/core': 32.3.2
@@ -4101,7 +4109,7 @@ snapshots:
     dependencies:
       denque: 2.1.0
 
-  '@milaboratories/uikit@2.0.3(typescript@5.5.4)':
+  '@milaboratories/uikit@2.0.4(typescript@5.5.4)':
     dependencies:
       vue: 3.5.12(typescript@5.5.4)
     transitivePeerDependencies:
@@ -4222,13 +4230,14 @@ snapshots:
       - supports-color
       - terser
 
-  '@platforma-sdk/ui-vue@1.7.36(typescript@5.5.4)':
+  '@platforma-sdk/ui-vue@1.7.40(typescript@5.5.4)':
     dependencies:
       '@ag-grid-community/client-side-row-model': 32.3.2
       '@ag-grid-community/core': 32.3.2
       '@ag-grid-community/csv-export': 32.3.2
       '@ag-grid-community/infinite-row-model': 32.3.2
       '@ag-grid-community/styles': 32.3.2
+      '@ag-grid-community/theming': 32.3.2
       '@ag-grid-community/vue3': 32.3.2(typescript@5.5.4)
       '@ag-grid-enterprise/clipboard': 32.3.2
       '@ag-grid-enterprise/core': 32.3.2
@@ -4237,7 +4246,7 @@ snapshots:
       '@ag-grid-enterprise/range-selection': 32.3.2
       '@ag-grid-enterprise/rich-select': 32.3.2
       '@ag-grid-enterprise/server-side-row-model': 32.3.2
-      '@milaboratories/uikit': 2.0.3(typescript@5.5.4)
+      '@milaboratories/uikit': 2.0.4(typescript@5.5.4)
       '@platforma-sdk/model': 1.7.20
       canonicalize: 2.0.0
       lru-cache: 11.0.2

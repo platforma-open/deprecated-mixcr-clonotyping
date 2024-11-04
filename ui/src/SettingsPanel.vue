@@ -72,7 +72,7 @@ function setPresetFile(file?: ImportFileHandle) {
 </script>
 
 <template>
-  <PlDropdownRef :options="inputOptions ?? []" v-model="app.model.args.input" label="Select dataset" clearable />
+  <PlDropdownRef style="z-index: 2" :options="inputOptions ?? []" v-model="app.model.args.input" label="Select dataset" clearable />
 
   <PlBtnGroup :options="presetSourceOptions" v-model="data.presetType" />
 
