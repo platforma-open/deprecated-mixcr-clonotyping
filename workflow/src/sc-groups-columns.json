@@ -3,11 +3,13 @@
       {
         "column": "cellGroup",
         "id": "cell-group",
+        "naRegex": "undefined|contamination",
         "allowNA": false,
         "spec": {
           "name": "pl7.app/vdj/cellGroup",
           "valueType": "Long",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "Cell group number",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "110000"
@@ -24,6 +26,7 @@
           "name": "pl7.app/vdj/groupReadCount",
           "valueType": "Long",
           "annotations": {
+            "pl7.app/min": "1",
             "pl7.app/label": "Number of reads in group",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "100000"
@@ -37,6 +40,7 @@
           "name": "pl7.app/vdj/groupUniqueCellCount",
           "valueType": "Long",
           "annotations": {
+            "pl7.app/min": "1",
             "pl7.app/label": "Number of unique cells in group",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "99500"
@@ -50,6 +54,7 @@
           "name": "pl7.app/vdj/groupUniqueMoleculeCount",
           "valueType": "Long",
           "annotations": {
+            "pl7.app/min": "1",
             "pl7.app/label": "Number of UMI in group",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "99000"
@@ -63,6 +68,7 @@
           "name": "pl7.app/vdj/IGH.cloneCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "1",
             "pl7.app/label": "IGH clone count",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "90000"
@@ -76,6 +82,7 @@
           "name": "pl7.app/vdj/IGK.cloneCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "1",
             "pl7.app/label": "IGK clone count",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "89500"
@@ -89,6 +96,7 @@
           "name": "pl7.app/vdj/IGL.cloneCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "1",
             "pl7.app/label": "IGL clone count",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "89000"
@@ -102,6 +110,7 @@
           "name": "pl7.app/vdj/TRB.cloneCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "1",
             "pl7.app/label": "TRB clone count",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "88500"
@@ -115,6 +124,7 @@
           "name": "pl7.app/vdj/TRA.cloneCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "1",
             "pl7.app/label": "TRA clone count",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "88000"
@@ -123,11 +133,13 @@
       }, {
         "column": "IGH.primary.readCount",
         "id": "igh-primary-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGH.primary.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGH primary clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "80000"
@@ -136,11 +148,13 @@
       }, {
         "column": "IGH.second.readCount",
         "id": "igh-second-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGH.second.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGH second clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "79500"
@@ -149,11 +163,13 @@
       }, {
         "column": "IGK.primary.readCount",
         "id": "igk-primary-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGK.primary.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGK primary clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "79000"
@@ -162,11 +178,13 @@
       }, {
         "column": "IGK.second.readCount",
         "id": "igk-second-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGK.second.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGK second clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "78500"
@@ -175,11 +193,13 @@
       }, {
         "column": "IGL.primary.readCount",
         "id": "igl-primary-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGL.primary.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGL primary clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "78000"
@@ -188,11 +208,13 @@
       }, {
         "column": "IGL.second.readCount",
         "id": "igl-second-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGL.second.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGL second clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "77500"
@@ -201,11 +223,13 @@
       }, {
         "column": "TRB.primary.readCount",
         "id": "trb-primary-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/TRB.primary.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "TRB primary clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "77000"
@@ -214,11 +238,13 @@
       }, {
         "column": "TRB.second.readCount",
         "id": "trb-second-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/TRB.second.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "TRB second clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "76500"
@@ -227,11 +253,13 @@
       }, {
         "column": "TRA.primary.readCount",
         "id": "tra-primary-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/TRA.primary.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "TRA primary clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "76000"
@@ -240,11 +268,13 @@
       }, {
         "column": "TRA.second.readCount",
         "id": "tra-second-read-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/TRA.second.readCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "TRA second clone read count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "75500"
@@ -253,11 +283,13 @@
       }, {
         "column": "IGH.primary.uniqueMoleculeCount",
         "id": "igh-primary-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGH.primary.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGH primary clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "70000"
@@ -266,11 +298,13 @@
       }, {
         "column": "IGH.second.uniqueMoleculeCount",
         "id": "igh-second-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGH.second.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGH second clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "69500"
@@ -279,11 +313,13 @@
       }, {
         "column": "IGK.primary.uniqueMoleculeCount",
         "id": "igk-primary-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGK.primary.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGK primary clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "69000"
@@ -292,11 +328,13 @@
       }, {
         "column": "IGK.second.uniqueMoleculeCount",
         "id": "igk-second-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGK.second.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGK second clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "68500"
@@ -305,11 +343,13 @@
       }, {
         "column": "IGL.primary.uniqueMoleculeCount",
         "id": "igl-primary-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGL.primary.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGL primary clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "68000"
@@ -318,11 +358,13 @@
       }, {
         "column": "IGL.second.uniqueMoleculeCount",
         "id": "igl-second-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/IGL.second.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "IGL second clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "67500"
@@ -331,11 +373,13 @@
       }, {
         "column": "TRB.primary.uniqueMoleculeCount",
         "id": "trb-primary-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/TRB.primary.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "TRB primary clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "67000"
@@ -344,11 +388,13 @@
       }, {
         "column": "TRB.second.uniqueMoleculeCount",
         "id": "trb-second-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/TRB.second.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "TRB second clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "66500"
@@ -357,11 +403,13 @@
       }, {
         "column": "TRA.primary.uniqueMoleculeCount",
         "id": "tra-primary-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/TRA.primary.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "TRA primary clone UMi count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "66000"
@@ -370,11 +418,13 @@
       }, {
         "column": "TRA.second.uniqueMoleculeCount",
         "id": "tra-second-umi-count",
+        "naRegex": "0",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/TRA.second.uniqueMoleculeCount",
           "valueType": "Double",
           "annotations": {
+            "pl7.app/min": "0",
             "pl7.app/label": "TRA second clone UMI count",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "65500"
@@ -383,6 +433,7 @@
       }, {
         "column": "IGH.primary.bestVHit",
         "id": "igh-primary-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -401,6 +452,7 @@
       }, {
         "column": "IGH.second.bestVHit",
         "id": "igh-second-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -419,6 +471,7 @@
       }, {
         "column": "IGK.primary.bestVHit",
         "id": "igk-primary-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -437,6 +490,7 @@
       }, {
         "column": "IGK.second.bestVHit",
         "id": "igk-second-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -455,6 +509,7 @@
       }, {
         "column": "IGL.primary.bestVHit",
         "id": "igl-primary-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -473,6 +528,7 @@
       }, {
         "column": "IGL.second.bestVHit",
         "id": "igl-second-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -491,6 +547,7 @@
       }, {
         "column": "TRB.primary.bestVHit",
         "id": "trb-primary-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -509,6 +566,7 @@
       }, {
         "column": "TRB.second.bestVHit",
         "id": "trb-second-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -527,6 +585,7 @@
       }, {
         "column": "TRA.primary.bestVHit",
         "id": "tra-primary-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -545,6 +604,7 @@
       }, {
         "column": "TRA.second.bestVHit",
         "id": "tra-second-best-v-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -563,6 +623,7 @@
       }, {
         "column": "IGH.primary.bestDHit",
         "id": "igh-primary-best-d-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -581,6 +642,7 @@
       }, {
         "column": "IGH.second.bestDHit",
         "id": "igh-second-best-d-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -599,6 +661,7 @@
       }, {
         "column": "TRB.primary.bestDHit",
         "id": "trb-primary-best-d-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -617,6 +680,7 @@
       }, {
         "column": "TRB.second.bestDHit",
         "id": "trb-second-best-d-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -635,6 +699,7 @@
       }, {
         "column": "IGH.primary.bestJHit",
         "id": "igh-primary-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -653,6 +718,7 @@
       }, {
         "column": "IGH.second.bestJHit",
         "id": "igh-second-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -671,6 +737,7 @@
       }, {
         "column": "IGK.primary.bestJHit",
         "id": "igk-primary-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -689,6 +756,7 @@
       }, {
         "column": "IGK.second.bestJHit",
         "id": "igk-second-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -707,6 +775,7 @@
       }, {
         "column": "IGL.primary.bestJHit",
         "id": "igl-primary-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -725,6 +794,7 @@
       }, {
         "column": "IGL.second.bestVHit",
         "id": "igl-second-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -743,6 +813,7 @@
       }, {
         "column": "TRB.primary.bestJHit",
         "id": "trb-primary-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -761,6 +832,7 @@
       }, {
         "column": "TRB.second.bestJHit",
         "id": "trb-second-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -779,6 +851,7 @@
       }, {
         "column": "TRA.primary.bestJHit",
         "id": "tra-primary-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -797,6 +870,7 @@
       }, {
         "column": "TRA.second.bestJHit",
         "id": "tra-second-best-j-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -815,6 +889,7 @@
       }, {
         "column": "IGH.primary.bestCHit",
         "id": "igh-primary-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -833,6 +908,7 @@
       }, {
         "column": "IGH.second.bestCHit",
         "id": "igh-second-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -851,6 +927,7 @@
       }, {
         "column": "IGK.primary.bestCHit",
         "id": "igk-primary-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -869,6 +946,7 @@
       }, {
         "column": "IGK.second.bestCHit",
         "id": "igk-second-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -887,6 +965,7 @@
       }, {
         "column": "IGL.primary.bestCHit",
         "id": "igl-primary-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -905,6 +984,7 @@
       }, {
         "column": "IGL.second.bestCHit",
         "id": "igl-second-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -923,6 +1003,7 @@
       }, {
         "column": "TRB.primary.bestCHit",
         "id": "trb-primary-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -941,6 +1022,7 @@
       }, {
         "column": "TRB.second.bestCHit",
         "id": "trb-second-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -959,6 +1041,7 @@
       }, {
         "column": "TRA.primary.bestCHit",
         "id": "tra-primary-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -977,6 +1060,7 @@
       }, {
         "column": "TRA.second.bestCHit",
         "id": "tra-second-best-c-hit",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "name": "pl7.app/vdj/geneHit",
@@ -995,6 +1079,7 @@
       }, {
         "column": "IGH.primary.nSeqCDR3",
         "id": "igh-primary-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1012,6 +1097,7 @@
       }, {
         "column": "IGH.second.nSeqCDR3",
         "id": "igh-second-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1029,6 +1115,7 @@
       }, {
         "column": "IGK.primary.nSeqCDR3",
         "id": "igk-primary-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1046,6 +1133,7 @@
       }, {
         "column": "IGK.second.nSeqCDR3",
         "id": "igk-second-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1063,6 +1151,7 @@
       }, {
         "column": "IGL.primary.nSeqCDR3",
         "id": "igl-primary-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1080,6 +1169,7 @@
       }, {
         "column": "IGL.second.nSeqCDR3",
         "id": "igl-second-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1097,6 +1187,7 @@
       }, {
         "column": "TRB.primary.nSeqCDR3",
         "id": "trb-primary-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1114,6 +1205,7 @@
       }, {
         "column": "TRB.second.nSeqCDR3",
         "id": "trb-second-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1131,6 +1223,7 @@
       }, {
         "column": "TRA.primary.nSeqCDR3",
         "id": "tra-primary-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1148,6 +1241,7 @@
       }, {
         "column": "TRA.second.nSeqCDR3",
         "id": "tra-second-n-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1165,6 +1259,7 @@
       }, {
         "column": "IGH.primary.aaSeqCDR3",
         "id": "igh-primary-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1182,6 +1277,7 @@
       }, {
         "column": "IGH.second.aaSeqCDR3",
         "id": "igh-second-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1199,6 +1295,7 @@
       }, {
         "column": "IGK.primary.aaSeqCDR3",
         "id": "igk-primary-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1216,6 +1313,7 @@
       }, {
         "column": "IGK.second.aaSeqCDR3",
         "id": "igk-second-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1233,6 +1331,7 @@
       }, {
         "column": "IGL.primary.aaSeqCDR3",
         "id": "igl-primary-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1250,6 +1349,7 @@
       }, {
         "column": "IGL.second.aaSeqCDR3",
         "id": "igl-second-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1267,6 +1367,7 @@
       }, {
         "column": "TRB.primary.aaSeqCDR3",
         "id": "trb-primary-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1284,6 +1385,7 @@
       }, {
         "column": "TRB.second.aaSeqCDR3",
         "id": "trb-second-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1301,6 +1403,7 @@
       }, {
         "column": "TRA.primary.aaSeqCDR3",
         "id": "tra-primary-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
@@ -1318,6 +1421,7 @@
       }, {
         "column": "TRA.second.aaSeqCDR3",
         "id": "tra-second-aa-seq-cdr3",
+        "naRegex": "",
         "allowNA": true,
         "spec": {
           "valueType": "String",
