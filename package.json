@@ -31,14 +31,19 @@
       "url": "https://github.com/milaboratory/block-mixcr-clonotyping",
       "docs": "https://github.com/milaboratory/block-mixcr-clonotyping/docs",
       "support": "mailto:support@milaboratories.com",
-      "description": "Extract TCR / BCR clonotypes from next-generation sequencing data",
+      "description": "Extract TCR/BCR immune repertoires from your samples.",
       "longDescription": "file:./docs/description.md",
       "changelog": "file:CHANGELOG.md",
       "tags": [
         "upstream",
         "airr",
         "vdj",
-        "single-cell"
+        "single-cell",
+        "MiXCR",
+        "immunology",
+        "repertoire",
+        "TCR",
+        "BCR"
       ],
       "organization": {
         "name": "MiLaboratories Inc",
