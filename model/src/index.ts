@@ -48,21 +48,13 @@ export const platforma = BlockModel.create('Heavy')
     return ctx.outputs !== undefined
       ? parseResourceMap(
           ctx.outputs?.resolve('logs'),
-          (acc) => acc.getProgressLog(ProgressPrefix),
+          (acc) => acc.getProgressLogWithInfo(ProgressPrefix),
           false,
         )
       : undefined;
   })
 
   .output('started', (ctx) => ctx.outputs !== undefined)
-
-  .output('done', (ctx) => {
-    return ctx.outputs !== undefined
-      ? parseResourceMap(ctx.outputs?.resolve('clns'), (_acc) => true, false).data.map(
-          (e) => e.key[0] as string,
-        )
-      : undefined;
-  })
 
   .output('clones', (ctx) => {
     const collection = ctx.outputs?.resolve('clones')?.parsePObjectCollection();
