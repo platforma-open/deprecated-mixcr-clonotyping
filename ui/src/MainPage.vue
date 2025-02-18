@@ -29,7 +29,7 @@ import { getAlignmentChartSettings } from './charts/alignmentChartSettings';
 import { getChainsChartSettings } from './charts/chainsChartSettings';
 import { PlAgChartStackedBarCell, createAgGridColDef } from '@platforma-sdk/ui-vue';
 import { parseProgressString } from './parseProgress';
-import { ProgressLogWithInfo } from '@platforma-sdk/model';
+import type { ProgressLogWithInfo } from '@platforma-sdk/model';
 
 const app = useApp();
 
@@ -100,7 +100,7 @@ const columnDefs: ColDef<MiXCRResult>[] = [
     field: 'progress',
     headerName: 'Progress',
     progress(cellData) {
-      const parsed = parseProgressString(cellData.value?.progressLine);
+      const parsed = parseProgressString(cellData.value?.progressLine, cellData.value?.live);
 
       if (parsed.stage === 'Queued') {
         return {

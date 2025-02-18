@@ -3,7 +3,6 @@ import type {
 import {
   AlignReport,
   AssembleReport,
-  ProgressPrefix,
   Qc,
 } from '@platforma-open/milaboratories.mixcr-clonotyping.model';
 import type { AnyLogHandle, ProgressLogWithInfo } from '@platforma-sdk/model';
@@ -107,21 +106,8 @@ export const MiXCRResultsFull = computed<MiXCRResult[] | undefined>(() => {
   // adding progress information
   for (const p of progress.data) {
     const sampleId = p.key[0] as string;
-    if (resultMap.get(sampleId))
-      if (p?.value) {
-        const progress: ProgressLogWithInfo = {
-          progressLine: 'Not started',
-          live: true,
-        };
-        if ((p.value?.progressLine?.length ?? 0) > 0) {
-          progress.progressLine = p.value.progressLine?.replace(ProgressPrefix, '');
-        }
-        if (p.value?.live == false) {
-          progress.progressLine = 'Done';
-        }
-
-        resultMap.get(sampleId)!.progress = progress;
-      }
+    if (resultMap.get(sampleId) && p?.value)
+      resultMap.get(sampleId)!.progress = p.value;
   }
 
   return [...resultMap.values()];

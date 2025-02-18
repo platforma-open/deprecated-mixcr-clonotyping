@@ -8,7 +8,7 @@ export const sdkPlugin = defineApp(platforma, (app) => {
       const qc = app.model.outputs.qc;
       const progresses = app.model.outputs.progress?.data;
       if (!progresses || !qc) return undefined;
-      const done = progresses.map(p => p.value?.live == false)
+      const done = progresses.filter((p) => p.value?.live === false);
 
       const result = done.length / qc.data.length;
 

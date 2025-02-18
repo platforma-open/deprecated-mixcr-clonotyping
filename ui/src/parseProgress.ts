@@ -1,4 +1,4 @@
-import { ProgressPattern } from '@platforma-open/milaboratories.mixcr-clonotyping.model';
+import { ProgressPattern, ProgressPrefix } from '@platforma-open/milaboratories.mixcr-clonotyping.model';
 
 type ParsedProgress = {
   raw?: string;
@@ -17,8 +17,10 @@ type ParsedProgress = {
 // 'Exporting clones: 11.1%'
 // 'Queued'
 // 'Done'
-export function parseProgressString(progressString: string | undefined | null): ParsedProgress {
-  const raw = progressString ?? 'Unknown';
+export function parseProgressString(progressString: string | undefined | null, live: boolean | undefined): ParsedProgress {
+  let raw = (progressString ?? 'Not started').replace(ProgressPrefix, '');
+  if (live === false)
+    raw = 'Done';
 
   const res: ParsedProgress = {
     raw,
