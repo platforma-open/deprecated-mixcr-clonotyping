@@ -4,7 +4,7 @@ import { AgGridVue } from 'ag-grid-vue3';
 import { ClientSideRowModelModule } from 'ag-grid-enterprise';
 import type { ColDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-enterprise';
 import { ModuleRegistry } from 'ag-grid-enterprise';
-import type { PlId, Qc } from '@platforma-open/milaboratories.mixcr-clonotyping.model';
+import { ProgressPattern, ProgressPrefix, type PlId, type Qc } from '@platforma-open/milaboratories.mixcr-clonotyping.model';
 import {
   AgGridTheme,
   PlAgOverlayLoading,
@@ -28,7 +28,6 @@ import SettingsPanel from './SettingsPanel.vue';
 import { getAlignmentChartSettings } from './charts/alignmentChartSettings';
 import { getChainsChartSettings } from './charts/chainsChartSettings';
 import { PlAgChartStackedBarCell, createAgGridColDef } from '@platforma-sdk/ui-vue';
-import { parseProgressString } from './parseProgress';
 import type { ProgressLogWithInfo } from '@platforma-sdk/model';
 
 const app = useApp();
@@ -99,21 +98,36 @@ const columnDefs: ColDef<MiXCRResult>[] = [
     colId: 'progress',
     field: 'progress',
     headerName: 'Progress',
-    progress(cellData) {
-      const parsed = parseProgressString(cellData.value?.progressLine, cellData.value?.live);
 
-      if (parsed.stage === 'Queued') {
+    // Progress string examples:
+    // 'Final sorting: 95.2%'
+    // 'Building pre-clones from tag groups: 92.9%  ETA: 00:00:00'
+    // 'Initialization: progress unknown'
+    // 'Applying correction & sorting alignments by UMI'
+    // 'Alignment: 60.4%  ETA: 00:00:01'
+    // 'Exporting clones: 11.1%'
+    // 'Queued'
+    // 'Done'
+    progress(cellData) {
+      const val = cellData.value;
+      const progressLine = val?.progressLine ?? 'Not started';
+      const live = val?.live ?? true;
+
+      const raw = progressLine.replace(ProgressPrefix, '');
+      const match = raw.match(ProgressPattern);
+      if (!match || raw === 'Queued')
         return {
           status: 'not_started',
-          text: parsed.stage,
+          text: raw,
         };
-      }
+
+      const { stage, progress, eta } = match.groups!;
 
       return {
-        status: parsed.stage === 'Done' ? 'done' : 'running',
-        percent: parsed.percentage,
-        text: parsed.stage,
-        suffix: parsed.etaLabel ?? '',
+        status: live ? 'running' : 'done',
+        percent: progress,
+        text: live ? stage : 'Done',
+        suffix: eta ? `ETA: ${eta}` : '',
       };
     },
   }),
