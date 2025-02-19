@@ -94,7 +94,7 @@ const columnDefs: ColDef<MiXCRResult>[] = [
       invokeRowsOnDoubleClick: true,
     },
   },
-  createAgGridColDef<MiXCRResult, ProgressLogWithInfo>({
+  createAgGridColDef<MiXCRResult, ProgressLogWithInfo | undefined>({
     colId: 'progress',
     field: 'progress',
     headerName: 'Progress',
@@ -108,26 +108,31 @@ const columnDefs: ColDef<MiXCRResult>[] = [
     // 'Exporting clones: 11.1%'
     // 'Queued'
     // 'Done'
+    //
+    // @todo migrate to progress(cellValue, cellData)
+    //
     progress(cellData) {
       const val = cellData.value;
-      const progressLine = val?.progressLine ?? 'Not started';
-      const live = val?.live ?? true;
 
-      const raw = progressLine.replace(ProgressPrefix, '');
-      const match = raw.match(ProgressPattern);
-      if (!match || raw === 'Queued')
+      if (!val?.progressLine)
+        return { status: 'not_started' };
+      if (!val.live)
+        return { status: 'done' };
+
+      const progressLine = val.progressLine.replace(ProgressPrefix, '');
+      const match = progressLine.match(ProgressPattern);
+      if (!match) {
         return {
-          status: 'not_started',
-          text: raw,
+          status: 'running',
+          text: progressLine,
         };
-
+      }
       const { stage, progress, eta } = match.groups!;
-
       return {
-        status: live ? 'running' : 'done',
+        status: 'running',
+        text: stage,
         percent: progress,
-        text: live ? stage : 'Done',
-        suffix: eta ? `ETA: ${eta}` : '',
+        suffix: eta ? `ETA: ${eta}` : undefined,
       };
     },
   }),

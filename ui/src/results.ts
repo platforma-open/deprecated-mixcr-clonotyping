@@ -13,7 +13,7 @@ import { useApp } from './app';
 export type MiXCRResult = {
   label: string;
   sampleId: PlId;
-  progress: ProgressLogWithInfo;
+  progress?: ProgressLogWithInfo;
   logHandle?: AnyLogHandle;
   qc?: Qc;
   alignReport?: AlignReport;
@@ -42,10 +42,6 @@ export const MiXCRResultsMap = computed(() => {
     const sampleId = qcData.key[0] as string;
     const result: MiXCRResult = {
       sampleId: sampleId as PlId,
-      progress: {
-        progressLine: 'Queued',
-        live: true,
-      },
       label: sampleLabels?.[sampleId] ?? `<no label / ${sampleId}>`,
     };
     resultMap.set(sampleId, result);
