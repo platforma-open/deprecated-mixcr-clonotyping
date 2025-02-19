@@ -6,9 +6,13 @@ export const sdkPlugin = defineApp(platforma, (app) => {
   return {
     progress: () => {
       const qc = app.model.outputs.qc;
-      const done = app.model.outputs.done;
-      if (!done || !qc) return undefined;
-      return done.length / qc.data.length;
+      const progresses = app.model.outputs.progress?.data;
+      if (!progresses || !qc) return undefined;
+      const done = progresses.filter((p) => p.value?.live === false);
+
+      const result = done.length / qc.data.length;
+
+      return result;
     },
     routes: {
       '/': () => MainPageWrapper,

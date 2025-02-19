@@ -4,7 +4,7 @@ import { AgGridVue } from 'ag-grid-vue3';
 import { ClientSideRowModelModule } from 'ag-grid-enterprise';
 import type { ColDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-enterprise';
 import { ModuleRegistry } from 'ag-grid-enterprise';
-import type { PlId, Qc } from '@platforma-open/milaboratories.mixcr-clonotyping.model';
+import { ProgressPattern, ProgressPrefix, type PlId, type Qc } from '@platforma-open/milaboratories.mixcr-clonotyping.model';
 import {
   AgGridTheme,
   PlAgOverlayLoading,
@@ -28,7 +28,7 @@ import SettingsPanel from './SettingsPanel.vue';
 import { getAlignmentChartSettings } from './charts/alignmentChartSettings';
 import { getChainsChartSettings } from './charts/chainsChartSettings';
 import { PlAgChartStackedBarCell, createAgGridColDef } from '@platforma-sdk/ui-vue';
-import { parseProgressString } from './parseProgress';
+import type { ProgressLogWithInfo } from '@platforma-sdk/model';
 
 const app = useApp();
 
@@ -94,25 +94,45 @@ const columnDefs: ColDef<MiXCRResult>[] = [
       invokeRowsOnDoubleClick: true,
     },
   },
-  createAgGridColDef<MiXCRResult, string>({
+  createAgGridColDef<MiXCRResult, ProgressLogWithInfo | undefined>({
     colId: 'progress',
     field: 'progress',
     headerName: 'Progress',
-    progress(cellData) {
-      const parsed = parseProgressString(cellData.value);
 
-      if (parsed.stage === 'Queued') {
+    // Progress string examples:
+    // 'Final sorting: 95.2%'
+    // 'Building pre-clones from tag groups: 92.9%  ETA: 00:00:00'
+    // 'Initialization: progress unknown'
+    // 'Applying correction & sorting alignments by UMI'
+    // 'Alignment: 60.4%  ETA: 00:00:01'
+    // 'Exporting clones: 11.1%'
+    // 'Queued'
+    // 'Done'
+    //
+    // @todo migrate to progress(cellValue, cellData)
+    //
+    progress(cellData) {
+      const val = cellData.value;
+
+      if (!val?.progressLine)
+        return { status: 'not_started' };
+      if (!val.live)
+        return { status: 'done' };
+
+      const progressLine = val.progressLine.replace(ProgressPrefix, '');
+      const match = progressLine.match(ProgressPattern);
+      if (!match) {
         return {
-          status: 'not_started',
-          text: parsed.stage,
+          status: 'running',
+          text: progressLine,
         };
       }
-
+      const { stage, progress, eta } = match.groups!;
       return {
-        status: parsed.stage === 'Done' ? 'done' : 'running',
-        percent: parsed.percentage,
-        text: parsed.stage,
-        suffix: parsed.etaLabel ?? '',
+        status: 'running',
+        text: stage,
+        percent: progress,
+        suffix: eta ? `ETA: ${eta}` : undefined,
       };
     },
   }),

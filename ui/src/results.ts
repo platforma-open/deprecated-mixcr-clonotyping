@@ -3,10 +3,9 @@ import type {
 import {
   AlignReport,
   AssembleReport,
-  ProgressPrefix,
   Qc,
 } from '@platforma-open/milaboratories.mixcr-clonotyping.model';
-import type { AnyLogHandle } from '@platforma-sdk/model';
+import type { AnyLogHandle, ProgressLogWithInfo } from '@platforma-sdk/model';
 import { ReactiveFileContent } from '@platforma-sdk/ui-vue';
 import { computed } from 'vue';
 import { useApp } from './app';
@@ -14,7 +13,7 @@ import { useApp } from './app';
 export type MiXCRResult = {
   label: string;
   sampleId: PlId;
-  progress: string;
+  progress?: ProgressLogWithInfo;
   logHandle?: AnyLogHandle;
   qc?: Qc;
   alignReport?: AlignReport;
@@ -43,7 +42,6 @@ export const MiXCRResultsMap = computed(() => {
     const sampleId = qcData.key[0] as string;
     const result: MiXCRResult = {
       sampleId: sampleId as PlId,
-      progress: 'Queued',
       label: sampleLabels?.[sampleId] ?? `<no label / ${sampleId}>`,
     };
     resultMap.set(sampleId, result);
@@ -95,10 +93,6 @@ export const MiXCRResultsFull = computed<MiXCRResult[] | undefined>(() => {
   const progress = app.model.outputs.progress;
   if (progress === undefined) return undefined;
 
-  const doneRaw = app.model.outputs.done;
-  if (doneRaw === undefined) return undefined;
-  const done = new Set(doneRaw);
-
   const rawMap = MiXCRResultsMap.value;
   if (rawMap === undefined) return undefined;
 
@@ -108,11 +102,8 @@ export const MiXCRResultsFull = computed<MiXCRResult[] | undefined>(() => {
   // adding progress information
   for (const p of progress.data) {
     const sampleId = p.key[0] as string;
-    if (resultMap.get(sampleId))
-      if (p?.value)
-        resultMap.get(sampleId)!.progress = done.has(sampleId)
-          ? 'Done'
-          : p.value?.replace(ProgressPrefix, '') ?? 'Not started';
+    if (resultMap.get(sampleId) && p?.value)
+      resultMap.get(sampleId)!.progress = p.value;
   }
 
   return [...resultMap.values()];
