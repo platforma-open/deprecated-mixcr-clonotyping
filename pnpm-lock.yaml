@@ -43,8 +43,8 @@ catalogs:
       specifier: ^1.21.22
       version: 1.21.22
     '@platforma-sdk/ui-vue':
-      specifier: ^1.22.39
-      version: 1.22.39
+      specifier: ^1.22.55
+      version: 1.22.55
     '@platforma-sdk/workflow-tengo':
       specifier: ^2.9.9
       version: 2.9.9
@@ -187,7 +187,7 @@ importers:
         version: 1.21.20
       '@platforma-sdk/ui-vue':
         specifier: 'catalog:'
-        version: 1.22.39(typescript@5.5.4)
+        version: 1.22.55(typescript@5.5.4)
       '@vueuse/core':
         specifier: 'catalog:'
         version: 12.4.0(typescript@5.5.4)
@@ -1228,8 +1228,8 @@ packages:
   '@platforma-sdk/test@1.21.22':
     resolution: {integrity: sha512-ZtSF0UUBUjZqjFxOtd+AgLrdGaTputoF87q7Yri6G7WzhsTNEREKwnjVsb7lUOdMh/KHPqjbG9oD3gtxSlgjWA==}
 
-  '@platforma-sdk/ui-vue@1.22.39':
-    resolution: {integrity: sha512-GMCelLhzbSMb38315ZsgomG5H3OSA3I8yKvGqpIaUIUBz4vfiS2kn88jmyI348OMN5RfLMUkhPvDjMF/6KNScA==}
+  '@platforma-sdk/ui-vue@1.22.55':
+    resolution: {integrity: sha512-BoT2HZHAMQ+5Ng5smpdxRQNGbfggs1XQtOGmqAaAcPdcgqN32r4Qq7l7Hz2mqQLQs7R94fGGwiBIljam8yEvWw==}
 
   '@platforma-sdk/workflow-tengo@2.9.6':
     resolution: {integrity: sha512-8PjlA6zr/7f96i1c9WvkDif2IAvIJtVe40IPzhAQRJNBSBF8VTKUKel6noB1yK/qspS8ikLziFJGOG9FpFVz5Q==}
@@ -5131,7 +5131,7 @@ snapshots:
       - supports-color
       - terser
 
-  '@platforma-sdk/ui-vue@1.22.39(typescript@5.5.4)':
+  '@platforma-sdk/ui-vue@1.22.55(typescript@5.5.4)':
     dependencies:
       '@milaboratories/uikit': 2.2.58(typescript@5.5.4)
       '@platforma-sdk/model': 1.22.18
