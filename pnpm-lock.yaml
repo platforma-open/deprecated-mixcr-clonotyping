@@ -13,8 +13,8 @@ catalogs:
       specifier: ^1.6.11
       version: 1.6.11
     '@milaboratories/software-pframes-conv':
-      specifier: 2.1.12
-      version: 2.1.12
+      specifier: 2.1.16
+      version: 2.1.16
     '@platforma-open/milaboratories.samples-and-data':
       specifier: ^1.9.8
       version: 1.9.8
@@ -230,7 +230,7 @@ importers:
     devDependencies:
       '@milaboratories/software-pframes-conv':
         specifier: 'catalog:'
-        version: 2.1.12
+        version: 2.1.16
       '@platforma-open/milaboratories.software-mixcr':
         specifier: 'catalog:'
         version: 4.7.0-133-develop
@@ -1099,6 +1099,9 @@ packages:
 
   '@milaboratories/software-pframes-conv@2.1.12':
     resolution: {integrity: sha512-KKqRLDqGVhsCRwvANiRBBcCzur6QVzVCzVW4EiiL69+S2crbihwyfZAgxZsTXka5ch5uuPO+ZsIwgjZJk3xyJQ==}
+
+  '@milaboratories/software-pframes-conv@2.1.16':
+    resolution: {integrity: sha512-/Ck2N+3BkDFDegHFG+kuoSAMS4gqWrx9gzfc91A7LmDxgwxrwDKu87D3gFgi/6yUqrz+liVmP5sztfY3YijA+A==}
 
   '@milaboratories/tengo-tester@1.5.2':
     resolution: {integrity: sha512-8YMMntd+oTALxdlQXcreHWs0dVp1dUJhlBb0DpKGfh+YfB5KF/uZuVBKvCmmzDhYUMpxViT2JayDPg9tO4o6FA==}
@@ -4924,6 +4927,8 @@ snapshots:
   '@milaboratories/resolve-helper@1.0.2': {}
 
   '@milaboratories/software-pframes-conv@2.1.12': {}
+
+  '@milaboratories/software-pframes-conv@2.1.16': {}
 
   '@milaboratories/tengo-tester@1.5.2': {}
 
