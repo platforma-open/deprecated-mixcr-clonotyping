@@ -7,8 +7,9 @@ addAdditionalColumnArgs := func(mixcrCmdBuilder, featureParams) {
 	assemblingFeature := featureParams.assemblingFeature
 	imputed := featureParams.imputed
 	featureSpec := getFeature.getProductiveFeature(assemblingFeature, imputed)
+	productiveFeature := featureSpec.productiveFeature
 	addColumns := true
-	if assemblingFeature == "CDR3" {
+	if assemblingFeature == "CDR3" || text.split(assemblingFeature, ':')[0][1:5] == "CDR3" {
 		addColumns = false
 	}
 
@@ -28,11 +29,11 @@ addAdditionalColumnArgs := func(mixcrCmdBuilder, featureParams) {
 		arg("--append-export-clones-field").
 		arg("-nFeature").arg("JRegion").arg("germline").
 		arg("--append-export-clones-field").
-		arg("-isProductive").arg("CDR3").
+		arg("-isProductive").arg(productiveFeature).
 		arg("--append-export-clones-field").
-		arg("-isOOF").arg("CDR3").
+		arg("-isOOF").arg(productiveFeature).
 		arg("--append-export-clones-field").
-		arg("-hasStops").arg("CDR3")
+		arg("-hasStops").arg(productiveFeature)
 
 	
 	if addColumns {
@@ -53,23 +54,24 @@ addAdditionalColumnArgs := func(mixcrCmdBuilder, featureParams) {
 				arg("--append-export-clones-field").
 				arg("-nFeatureImputed").arg(assemblingFeature).
 				arg("--append-export-clones-field").
-				arg("-aaFeatureImputed").arg(assemblingFeature).
-				arg("--append-export-clones-field").
-				arg("-isProductive").arg("CDR3").
-				arg("--append-export-clones-field").
-				arg("-isOOF").arg("CDR3").
-				arg("--append-export-clones-field").
-				arg("-hasStops").arg("CDR3")
+				arg("-aaFeatureImputed").arg(assemblingFeature)
+				//arg("--append-export-clones-field").
+				//arg("-isProductive").arg("CDR3").
+				//arg("--append-export-clones-field").
+				//arg("-isOOF").arg("CDR3").
+				//arg("--append-export-clones-field").
+				//arg("-hasStops").arg("CDR3")
 		} else {
 			mutationVFeature := featureSpec.mutationVFeature
-			productiveFeature := featureSpec.productiveFeature
+			//productiveFeature := featureSpec.productiveFeature
+			//ll.print("__THE_LOG__"+productiveFeature)
 			mixcrCmdBuilder.
-				arg("--append-export-clones-field").
-				arg("-isProductive").arg(productiveFeature).
-				arg("--append-export-clones-field").
-				arg("-isOOF").arg(productiveFeature).
-				arg("--append-export-clones-field").
-				arg("-hasStops").arg(productiveFeature).
+				//arg("--append-export-clones-field").
+				//arg("-isProductive").arg(productiveFeature).
+				//arg("--append-export-clones-field").
+				//arg("-isOOF").arg(productiveFeature).
+				//arg("--append-export-clones-field").
+				//arg("-hasStops").arg(productiveFeature).
 				arg("--append-export-clones-field").
 				arg("-nMutations").arg(mutationVFeature).
 				arg("--append-export-clones-field").

@@ -1,5 +1,7 @@
 // calculate-pfconv-params
 self := import("@platforma-sdk/workflow-tengo:tpl")
+ll := import("@platforma-sdk/workflow-tengo:ll")
+text := import("text")
 // validation := import("@platforma-sdk/workflow-tengo:validation")
 
 pfconvParamsLib := import(":pfconv_params")
@@ -99,7 +101,7 @@ self.body(func(inputs) {
 	}
 
 	// add columns with covered feature sequences
-	if assemblingFeature != "CDR3" {
+	if assemblingFeature != "CDR3" && text.split(assemblingFeature, ':')[0][1:5] != "CDR3" {
 		if imputed {
 			columnsList += ["nSeqImputed"+assemblingFeature, "aaSeqImputed"+assemblingFeature, 
 							"nSeq"+assemblingFeature, "aaSeq"+assemblingFeature]
@@ -117,7 +119,7 @@ self.body(func(inputs) {
 	columnsList += ["isProductive"+productiveFeature, "isOOF"+productiveFeature, "hasStopsIn"+productiveFeature]
 
 	// add columns with mutations
-	if assemblingFeature != "CDR3" {
+	if assemblingFeature != "CDR3" && text.split(assemblingFeature, ':')[0][1:5] != "CDR3" {
 		mutationVFeature := featureSpec.mutationVFeature
 		columnsList += ["nMutations"+mutationVFeature, "aaMutations"+mutationVFeature, "nMutationsCount"+mutationVFeature,
 						"aaMutationsCount"+mutationVFeature, "nMutationsRate"+mutationVFeature, "aaMutationsRate"+mutationVFeature,
