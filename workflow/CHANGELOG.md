@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.workflow
 
+## 1.16.0
+
+### Minor Changes
+
+- a796b69: cell barcodes and feature bugs
+
 ## 1.15.0
 
 ### Minor Changes
