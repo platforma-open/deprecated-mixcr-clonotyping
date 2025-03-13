@@ -2,6 +2,12 @@ ll := import("@platforma-sdk/workflow-tengo:ll")
 getFeature := import(":check-feature")
 text := import("text")
 
+formatId := func(input) {
+    cleanNumbers := text.re_replace(`\(\s*-?\d+(\s*,\s*-?\d+)*\s*\)`, input, "")
+    cleanSpecialCharacters := text.re_replace(`[{}:()]`, cleanNumbers, "")
+    return cleanSpecialCharacters
+}
+
 getColumns := func(blockId, featureParams) {
   assemblingFeature := featureParams.assemblingFeature
   imputed := featureParams.imputed
@@ -10,16 +16,10 @@ getColumns := func(blockId, featureParams) {
   productiveFeature := featureSpec.productiveFeature
   mutationVFeature := featureSpec.mutationVFeature
   addColumns := true
-  if assemblingFeature == "CDR3" {
+  if assemblingFeature == "CDR3" || text.split(assemblingFeature, ':')[0][1:5] == "CDR3" {
     addColumns = false
   }
 
-  cellTagsList := []
-  if len(cellTags) > 0 {
-    for tag in cellTags {
-    
-    }
-  }
   cols := {
     "axes": [
       {
@@ -941,7 +941,7 @@ getColumns := func(blockId, featureParams) {
       },
       {
         "column": "isProductive" + productiveFeature,
-        "id": "is-productive-" + assemblingFeature,
+        "id": "is-productive-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {
           "valueType": "String",
@@ -957,7 +957,7 @@ getColumns := func(blockId, featureParams) {
       },
       {
         "column": "isOOF" + productiveFeature,
-        "id": "is-oof-" + assemblingFeature,
+        "id": "is-oof-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {
           "valueType": "String",
@@ -971,7 +971,7 @@ getColumns := func(blockId, featureParams) {
       },
       {
         "column": "hasStopsIn" + productiveFeature,
-        "id": "has-stops-in-" + assemblingFeature,
+        "id": "has-stops-in-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {
           "valueType": "String",
@@ -1304,28 +1304,32 @@ getColumns := func(blockId, featureParams) {
     } else {
       cols["columns"] = cols["columns"] + featureColumns + mutationColumns
     }
+  }
 
-    cellTagsList := []
-    label := undefined
-    priority := 100000
-    if len(cellTags) > 0 {
-      for tag in cellTags {
-        if tag == "CELL" {
-          label = "Cell tag"
-        } else {
-          label = text.to_title(tag[:4]) + " " + text.to_lower(tag[4:])
-        }
-        cols.axes += [
-          {
-            "column": "tagValue" + tag,
-            "naRegex": "",
-            "spec": {
-              "name": "pl7.app/vdj/tagValueCELL",
-              "type": "String",
-              "annotations": {
-                "pl7.app/label": label,
-                "pl7.app/table/visibility": "default",
-                "pl7.app/table/orderPriority": string(priority)
+  cellTagsList := []
+  label := undefined
+  priority := 100000
+  if len(cellTags) > 0 {
+    for tag in cellTags {
+      if tag == "CELL" {
+        label = "Cell tag"
+      } else {
+        label = text.to_title(tag[:4]) + " " + text.to_lower(tag[4:])
+      }
+      cols.axes += [
+        {
+          "column": "tagValue" + tag,
+          "naRegex": "",
+          "spec": {
+            "name": "pl7.app/vdj/tagValueCELL",
+            "type": "String",
+            "domain": {
+              "pl7.app/blockId": blockId
+            },
+            "annotations": {
+              "pl7.app/label": label,
+              "pl7.app/table/visibility": "default",
+              "pl7.app/table/orderPriority": string(priority)
               }
             }
           }
@@ -1333,7 +1337,6 @@ getColumns := func(blockId, featureParams) {
         priority -= 1
       }
     }
-  }
 	return cols
 }
 
