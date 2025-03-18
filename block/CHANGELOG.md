@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping
 
+## 1.8.15
+
+### Patch Changes
+
+- 4294e77: Updated tags and ranking
+
 ## 1.8.14
 
 ### Patch Changes
