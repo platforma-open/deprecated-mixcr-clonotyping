@@ -1,5 +1,13 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.test
 
+## 1.5.2
+
+### Patch Changes
+
+- 494da6e: Update p-frames
+- Updated dependencies [494da6e]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.1
+
 ## 1.5.1
 
 ### Patch Changes

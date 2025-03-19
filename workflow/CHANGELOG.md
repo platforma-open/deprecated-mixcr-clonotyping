@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.workflow
 
+## 1.17.1
+
+### Patch Changes
+
+- 494da6e: Update p-frames
+
 ## 1.17.0
 
 ### Minor Changes

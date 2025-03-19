@@ -1,5 +1,15 @@
 # @platforma-open/milaboratories.mixcr-clonotyping
 
+## 1.8.17
+
+### Patch Changes
+
+- 494da6e: Update p-frames
+- Updated dependencies [494da6e]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.1
+  - @platforma-open/milaboratories.mixcr-clonotyping.ui@1.10.2
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.17.1
+
 ## 1.8.16
 
 ### Patch Changes
