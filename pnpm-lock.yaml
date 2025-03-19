@@ -13,8 +13,8 @@ catalogs:
       specifier: ^1.6.11
       version: 1.6.11
     '@milaboratories/software-pframes-conv':
-      specifier: 2.1.17
-      version: 2.1.17
+      specifier: 2.1.18
+      version: 2.1.18
     '@platforma-open/milaboratories.samples-and-data':
       specifier: ^1.9.8
       version: 1.9.8
@@ -46,8 +46,8 @@ catalogs:
       specifier: ^1.22.82
       version: 1.22.82
     '@platforma-sdk/workflow-tengo':
-      specifier: ^2.13.4
-      version: 2.13.4
+      specifier: ^2.15.16
+      version: 2.15.16
     '@vitejs/plugin-vue':
       specifier: ^5.2.1
       version: 5.2.1
@@ -230,7 +230,7 @@ importers:
     devDependencies:
       '@milaboratories/software-pframes-conv':
         specifier: 'catalog:'
-        version: 2.1.17
+        version: 2.1.18
       '@platforma-open/milaboratories.software-mixcr':
         specifier: 'catalog:'
         version: 4.7.0-133-develop
@@ -245,7 +245,7 @@ importers:
         version: 1.22.66(@types/node@22.7.5)
       '@platforma-sdk/workflow-tengo':
         specifier: 'catalog:'
-        version: 2.13.4
+        version: 2.15.16
       typescript:
         specifier: 'catalog:'
         version: 5.5.4
@@ -1103,6 +1103,9 @@ packages:
   '@milaboratories/software-pframes-conv@2.1.17':
     resolution: {integrity: sha512-lrdGvmG7CqnfC2RM2zfkxDZvQICn+adLQq7fW2aoCbqGw07Ra0aVUsuB8UfaKQqR8sZLCe6r9BZoEc2nicu81Q==}
 
+  '@milaboratories/software-pframes-conv@2.1.18':
+    resolution: {integrity: sha512-XuAZFJnT6zxUqm/Y3u2OJDQLmoanWPc7f9O0NLAnROpF/JFKKQcycMKlFI/BR8VjahbjM3nVByJZbMxrMoUNcA==}
+
   '@milaboratories/tengo-tester@1.5.2':
     resolution: {integrity: sha512-8YMMntd+oTALxdlQXcreHWs0dVp1dUJhlBb0DpKGfh+YfB5KF/uZuVBKvCmmzDhYUMpxViT2JayDPg9tO4o6FA==}
     os: [darwin, linux, win32]
@@ -1164,6 +1167,9 @@ packages:
   '@platforma-open/milaboratories.software-small-binaries.java-stub@1.0.3':
     resolution: {integrity: sha512-xTHTJ4Kqvz3egmGdGDlBZeNoUi3rQRvm7KY/ru+DnkH+5tEzudnv4be5jiQ1yk0aFboeFuQjlYXwBMTlCuVB1g==}
 
+  '@platforma-open/milaboratories.software-small-binaries.mnz-client@1.5.12':
+    resolution: {integrity: sha512-AmAtnZQSocdjNiD40EZzG5LyBeR2r153z7WLquHeeTq4POHwvapmrKNI5lBW70LMlCXly7cPQpdCHxm1JcGEpw==}
+
   '@platforma-open/milaboratories.software-small-binaries.mnz-client@1.5.4':
     resolution: {integrity: sha512-w4GP7NNaXh/swD6HVenT+loXv5MimDNjxQjbpVJwNoeR93MhXrwfJdV6w9pq7DBtoR4UKLTnM/QqU+IvabzorA==}
 
@@ -1197,6 +1203,9 @@ packages:
   '@platforma-open/milaboratories.software-small-binaries@1.15.13':
     resolution: {integrity: sha512-wLHaVNYqC2AutTV47QMeUw27UrOMPjr8G0D1/OYEh3Jhxvs3ClwSpvGZ1yHDC79GTHee/77LKJbR3L5nRJrwvQ==}
 
+  '@platforma-open/milaboratories.software-small-binaries@1.15.19':
+    resolution: {integrity: sha512-vDSh0iPsg5hLJL/KCH/+1MD7qQhn4iFzYvGLfzFt4uFcN0NPZMqkb2Os9IBShYHcgVGGwbvRvJQ6w4Gh+tcpyA==}
+
   '@platforma-sdk/block-tools@2.5.16':
     resolution: {integrity: sha512-6zCioA3I41H7lcxRKd8oLkt5ki1tTBPHPTK2F4oL7VQc0Q2pmYhU1mKZ6cHvMz9G0miPjLMgEEhd7n+lBe79QQ==}
     hasBin: true
@@ -1228,6 +1237,9 @@ packages:
 
   '@platforma-sdk/workflow-tengo@2.13.4':
     resolution: {integrity: sha512-9DBOr5VkE9smed4iMMhLUGJvzWbUneZ/vkd3VIWSDE2dUsuUowyPwoW48Y6+KBwY42d0BuZimyj84/HT5BYu5g==}
+
+  '@platforma-sdk/workflow-tengo@2.15.16':
+    resolution: {integrity: sha512-2m+Igpwwl20LWd4rx5lZKpGA+tKxENcLbJNwAlWekcO89fEJJrDO+2ifQxX6aMq/HTzvM95F45ObtxpVPQ3pJg==}
 
   '@protobuf-ts/grpc-transport@2.9.4':
     resolution: {integrity: sha512-CgjTR3utmkMkkThpfgtOz9tNR9ZARbNoQYL7TCKqFU2sgAX0LgzAkwOx+sfgtUsZn9J08+yvn307nNJdYocLRA==}
@@ -4930,6 +4942,8 @@ snapshots:
 
   '@milaboratories/software-pframes-conv@2.1.17': {}
 
+  '@milaboratories/software-pframes-conv@2.1.18': {}
+
   '@milaboratories/tengo-tester@1.5.2': {}
 
   '@milaboratories/ts-helpers-oclif@1.1.13':
@@ -5010,6 +5024,8 @@ snapshots:
 
   '@platforma-open/milaboratories.software-small-binaries.java-stub@1.0.3': {}
 
+  '@platforma-open/milaboratories.software-small-binaries.mnz-client@1.5.12': {}
+
   '@platforma-open/milaboratories.software-small-binaries.mnz-client@1.5.4': {}
 
   '@platforma-open/milaboratories.software-small-binaries.mnz-client@1.5.6': {}
@@ -5050,6 +5066,21 @@ snapshots:
       '@platforma-open/milaboratories.software-small-binaries.hello-world-py': 1.0.4
       '@platforma-open/milaboratories.software-small-binaries.java-stub': 1.0.3
       '@platforma-open/milaboratories.software-small-binaries.mnz-client': 1.5.6
+      '@platforma-open/milaboratories.software-small-binaries.python-stub': 1.0.3
+      '@platforma-open/milaboratories.software-small-binaries.read-with-sleep': 1.0.4
+      '@platforma-open/milaboratories.software-small-binaries.runenv-java-stub': 1.0.5
+      '@platforma-open/milaboratories.software-small-binaries.runenv-python-stub': 1.0.5
+      '@platforma-open/milaboratories.software-small-binaries.sleep': 1.0.7
+      '@platforma-open/milaboratories.software-small-binaries.small-asset': 1.1.3
+      '@platforma-open/milaboratories.software-small-binaries.table-converter': 1.2.3
+
+  '@platforma-open/milaboratories.software-small-binaries@1.15.19':
+    dependencies:
+      '@platforma-open/milaboratories.software-small-binaries.guided-command': 1.0.4
+      '@platforma-open/milaboratories.software-small-binaries.hello-world': 1.0.4
+      '@platforma-open/milaboratories.software-small-binaries.hello-world-py': 1.0.4
+      '@platforma-open/milaboratories.software-small-binaries.java-stub': 1.0.3
+      '@platforma-open/milaboratories.software-small-binaries.mnz-client': 1.5.12
       '@platforma-open/milaboratories.software-small-binaries.python-stub': 1.0.3
       '@platforma-open/milaboratories.software-small-binaries.read-with-sleep': 1.0.4
       '@platforma-open/milaboratories.software-small-binaries.runenv-java-stub': 1.0.5
@@ -5150,6 +5181,11 @@ snapshots:
     dependencies:
       '@milaboratories/software-pframes-conv': 2.1.12
       '@platforma-open/milaboratories.software-small-binaries': 1.15.13
+
+  '@platforma-sdk/workflow-tengo@2.15.16':
+    dependencies:
+      '@milaboratories/software-pframes-conv': 2.1.17
+      '@platforma-open/milaboratories.software-small-binaries': 1.15.19
 
   '@protobuf-ts/grpc-transport@2.9.4(@grpc/grpc-js@1.12.6)':
     dependencies:
