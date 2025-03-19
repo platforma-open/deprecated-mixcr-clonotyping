@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.workflow
 
+## 1.17.0
+
+### Minor Changes
+
+- 8343ccd: change the columns names where productive feature is using
+
 ## 1.16.0
 
 ### Minor Changes
