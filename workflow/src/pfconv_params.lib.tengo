@@ -13,6 +13,7 @@ getColumns := func(blockId, featureParams) {
   imputed := featureParams.imputed
   cellTags := featureParams.cellTags
   featureSpec := getFeature.getProductiveFeature(assemblingFeature, imputed)
+  productiveFeatureInHeader := featureSpec.productiveFeatureInHeader
   productiveFeature := featureSpec.productiveFeature
   mutationVFeature := featureSpec.mutationVFeature
   addColumns := true
@@ -940,7 +941,7 @@ getColumns := func(blockId, featureParams) {
         }
       },
       {
-        "column": "isProductive" + productiveFeature,
+        "column": "isProductive" + productiveFeatureInHeader,
         "id": "is-productive-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {
@@ -956,7 +957,7 @@ getColumns := func(blockId, featureParams) {
         }
       },
       {
-        "column": "isOOF" + productiveFeature,
+        "column": "isOOF" + productiveFeatureInHeader,
         "id": "is-oof-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {
@@ -970,7 +971,7 @@ getColumns := func(blockId, featureParams) {
         }
       },
       {
-        "column": "hasStopsIn" + productiveFeature,
+        "column": "hasStopsIn" + productiveFeatureInHeader,
         "id": "has-stops-in-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {

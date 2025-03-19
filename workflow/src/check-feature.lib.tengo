@@ -3,24 +3,30 @@ text := import("text")
 
 getProductiveFeature := func(assemblingFeature, imputed) {
 	productiveFeature := undefined
+	productiveFeatureInHeader := undefined
 	mutationVFeature := assemblingFeature
     if assemblingFeature == "CDR3" || text.split(assemblingFeature, ':')[0][1:5] == "CDR3" || imputed {
 		productiveFeature = "CDR3"
+		productiveFeatureInHeader = "CDR3"
 	} else if assemblingFeature == "VDJRegion" {
 		productiveFeature = "VDJRegion(0,-1)"
+		productiveFeatureInHeader = "VDJRegion(0,-1)"
 		mutationVFeature = "{FR1Begin:FR3End}"
 	} else {
 		splittedFeature := text.split(assemblingFeature, "_TO_")
 		if splittedFeature[1] == "FR4" {
 			productiveFeature = "{"+splittedFeature[0] + "Begin:FR4End(-1)}"
+			productiveFeatureInHeader = splittedFeature[0] + "_TO_FR4(0,-1)"
 			mutationVFeature = "{"+splittedFeature[0]+"Begin:FR3End}"
 		} else {
 			productiveFeature = assemblingFeature
+			productiveFeatureInHeader = assemblingFeature
 			mutationVFeature = "{"+splittedFeature[0]+"Begin:FR3End}"
 		}
 	}
     return {
 		productiveFeature: productiveFeature,
+		productiveFeatureInHeader: productiveFeatureInHeader,
 		mutationVFeature: mutationVFeature
 	}
 }
