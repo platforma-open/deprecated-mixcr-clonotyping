@@ -115,8 +115,8 @@ self.body(func(inputs) {
 
 	// add boolean columns (isProductive, hasStops, hasOOF)
 	featureSpec := getFeature.getProductiveFeature(assemblingFeature, imputed)
-	productiveFeature := featureSpec.productiveFeature
-	columnsList += ["isProductive"+productiveFeature, "isOOF"+productiveFeature, "hasStopsIn"+productiveFeature]
+	productiveFeatureInHeader := featureSpec.productiveFeatureInHeader
+	columnsList += ["isProductive"+productiveFeatureInHeader, "isOOF"+productiveFeatureInHeader, "hasStopsIn"+productiveFeatureInHeader]
 
 	// add columns with mutations
 	if assemblingFeature != "CDR3" && text.split(assemblingFeature, ':')[0][1:5] != "CDR3" {
