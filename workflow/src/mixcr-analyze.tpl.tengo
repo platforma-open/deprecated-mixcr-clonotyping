@@ -60,6 +60,11 @@ self.body(func(inputs) {
 		}
 	}
 
+	hasCellTag := false
+	if len(presetContent.cellTags) > 0 {
+		hasCellTag = true
+	}
+
 	clnsFileName := "result.clns"
 	if hasAssembleContigs {
 		clnsFileName = "result.contigs.clns"
@@ -158,7 +163,7 @@ self.body(func(inputs) {
 		mixcrCmdBuilder.saveFile(report.fileTxt)
 	}
 
-	if hasAssembleCells {
+	if hasAssembleCells || hasCellTag {
 		mixcrCmdBuilder.saveFile("result.clones.tsv")
 	} else {
 		mixcrCmdBuilder.saveFileSet("clones", "^result\\.clones_[A-Z0-9]+\\.tsv$")
@@ -177,7 +182,7 @@ self.body(func(inputs) {
 
 	// converting clone tables to p columns
 	clones := {}
-	if hasAssembleCells {
+	if hasAssembleCells || hasCellTag {
 		clones = xsv.importFile(mixcrCmd.getFile("result.clones.tsv"), "tsv", pfconvParams, { dataOnly: true })
 	} else {
 		clones = render.create(exportClonesTpl, {
