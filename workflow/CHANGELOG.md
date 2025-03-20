@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.workflow
 
+## 1.18.0
+
+### Minor Changes
+
+- 86a35ca: presets with cell tags and without cell group assembly are processed like single cell data
+
 ## 1.17.2
 
 ### Patch Changes
