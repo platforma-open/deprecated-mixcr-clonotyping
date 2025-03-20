@@ -74,6 +74,8 @@ self.body(func(inputs) {
 		hasCellTag = true
 	}
 
+	isSingleCell := hasAssembleCells || hasCellTag
+
 	// calculating clns annotations
 
 	joinOrUndefined := func(arr) {
@@ -109,7 +111,7 @@ self.body(func(inputs) {
 	}
 
 	cColumnsAdditionalAxesSpec := []
-	if !hasAssembleCells  && !hasCellTag {
+	if !isSingleCell {
 		cColumnsAdditionalAxesSpec = append(cColumnsAdditionalAxesSpec, {
 			"name": "pl7.app/vdj/chain",
 			"type": "String",
@@ -195,7 +197,7 @@ self.body(func(inputs) {
 	ll.assert(purifiedPfconvCfg.storageFormat == "Binary", "unexpected format")
 
 	innerPartitionLength := 0
-	if !hasAssembleCells && !hasCellTag{
+	if !isSingleCell {
 		innerPartitionLength = 1 // [chain]
 	}
 
