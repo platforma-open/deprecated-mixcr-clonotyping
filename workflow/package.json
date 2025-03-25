@@ -10,11 +10,11 @@
     "format": "/usr/bin/env emacs --script ./format.el",
     "test": "vitest"
   },
+  "dependencies": {
+    "@platforma-sdk/workflow-tengo": "catalog:"
+  },
   "devDependencies": {
     "@platforma-sdk/tengo-builder": "catalog:",
-    "@platforma-sdk/workflow-tengo": "catalog:",
-    "@milaboratories/software-pframes-conv": "catalog:",
-    "@platforma-open/milaboratories.software-small-binaries": "catalog:",
     "@platforma-open/milaboratories.software-mixcr": "catalog:",
     "@platforma-sdk/test": "catalog:",
     "vitest": "catalog:",
