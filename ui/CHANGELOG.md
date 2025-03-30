@@ -1,5 +1,16 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.ui
 
+## 1.11.0
+
+### Minor Changes
+
+- b5e16e3: add additional species
+
+### Patch Changes
+
+- Updated dependencies [b5e16e3]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.9.0
+
 ## 1.10.4
 
 ### Patch Changes
