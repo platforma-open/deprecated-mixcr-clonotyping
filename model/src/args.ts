@@ -10,11 +10,10 @@ const _Species = z.union([
   z.literal('alpaca'),
   z.literal('mfas'),
   z.literal('mmul'),
-  z.literal('gallus'),
   z.literal('rabbit'),
   z.literal('rat'),
   z.literal('sheep'),
-  z.literal('spalax')
+  z.literal('spalax'),
 ]);
 
 export const PresetName = z.object({
