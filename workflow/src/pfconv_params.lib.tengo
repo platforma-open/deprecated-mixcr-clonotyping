@@ -2,24 +2,25 @@ ll := import("@platforma-sdk/workflow-tengo:ll")
 getFeature := import(":check-feature")
 text := import("text")
 
+formatId := func(input) {
+    cleanNumbers := text.re_replace(`\(\s*-?\d+(\s*,\s*-?\d+)*\s*\)`, input, "")
+    cleanSpecialCharacters := text.re_replace(`[{}:()]`, cleanNumbers, "")
+    return cleanSpecialCharacters
+}
+
 getColumns := func(blockId, featureParams) {
   assemblingFeature := featureParams.assemblingFeature
   imputed := featureParams.imputed
   cellTags := featureParams.cellTags
   featureSpec := getFeature.getProductiveFeature(assemblingFeature, imputed)
+  productiveFeatureInHeader := featureSpec.productiveFeatureInHeader
   productiveFeature := featureSpec.productiveFeature
   mutationVFeature := featureSpec.mutationVFeature
   addColumns := true
-  if assemblingFeature == "CDR3" {
+  if assemblingFeature == "CDR3" || text.split(assemblingFeature, ':')[0][1:5] == "CDR3" {
     addColumns = false
   }
 
-  cellTagsList := []
-  if len(cellTags) > 0 {
-    for tag in cellTags {
-    
-    }
-  }
   cols := {
     "axes": [
       {
@@ -171,6 +172,7 @@ getColumns := func(blockId, featureParams) {
           "annotations": {
             "type": "V gene name",
             "pl7.app/label": "Best V hit",
+            "pl7.app/isDiscreteFilter": "true",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "21000"
           }
@@ -189,6 +191,7 @@ getColumns := func(blockId, featureParams) {
           "annotations": {
             "type": "D gene name",
             "pl7.app/label": "Best D hit",
+            "pl7.app/isDiscreteFilter": "true",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "20500"
           }
@@ -208,6 +211,7 @@ getColumns := func(blockId, featureParams) {
           "annotations": {
             "type": "J gene name",
             "pl7.app/label": "Best J hit",
+            "pl7.app/isDiscreteFilter": "true",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "20000"
           }
@@ -226,6 +230,7 @@ getColumns := func(blockId, featureParams) {
           "annotations": {
             "type": "C gene name",
             "pl7.app/label": "Best C hit",
+            "pl7.app/isDiscreteFilter": "true",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "19500"
           }
@@ -912,6 +917,7 @@ getColumns := func(blockId, featureParams) {
           "name": "pl7.app/vdj/isotype",
           "annotations": {
             "pl7.app/label": "IG isotype",
+            "pl7.app/isDiscreteFilter": "true",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "19000"
           }
@@ -927,28 +933,32 @@ getColumns := func(blockId, featureParams) {
           "name": "pl7.app/vdj/chain",
           "annotations": {
             "pl7.app/label": "Chain",
+            "pl7.app/isDiscreteFilter": "true",
+            "pl7.app/discreteValues": "['TRA', 'TRB', 'TRG', 'TRD', 'IGH', 'IGK', 'IGL']",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "21500"
           }
         }
       },
       {
-        "column": "isProductive" + productiveFeature,
-        "id": "is-productive-" + assemblingFeature,
+        "column": "isProductive" + productiveFeatureInHeader,
+        "id": "is-productive-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {
           "valueType": "String",
           "name": "pl7.app/vdj/sequence/productive",
           "annotations": {
             "pl7.app/label": "Productive",
+            "pl7.app/isDiscreteFilter": "true",
+            "pl7.app/discreteValues": "['true', 'false']",
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "21400"
           }
         }
       },
       {
-        "column": "isOOF" + productiveFeature,
-        "id": "is-oof-" + assemblingFeature,
+        "column": "isOOF" + productiveFeatureInHeader,
+        "id": "is-oof-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {
           "valueType": "String",
@@ -961,14 +971,16 @@ getColumns := func(blockId, featureParams) {
         }
       },
       {
-        "column": "hasStopsIn" + productiveFeature,
-        "id": "has-stops-in-" + assemblingFeature,
+        "column": "hasStopsIn" + productiveFeatureInHeader,
+        "id": "has-stops-in-" + formatId(productiveFeature),
         "allowNA": false,
         "spec": {
           "valueType": "String",
           "name": "pl7.app/vdj/sequence/containsStopCodons",
           "annotations": {
             "pl7.app/label": "Contains stop codons",
+            "pl7.app/isDiscreteFilter": "true",
+            "pl7.app/discreteValues": "['true', 'false']",
             "pl7.app/table/visibility": "optional",
             "pl7.app/table/orderPriority": "10"
           }
@@ -1293,28 +1305,32 @@ getColumns := func(blockId, featureParams) {
     } else {
       cols["columns"] = cols["columns"] + featureColumns + mutationColumns
     }
+  }
 
-    cellTagsList := []
-    label := undefined
-    priority := 100000
-    if len(cellTags) > 0 {
-      for tag in cellTags {
-        if tag == "CELL" {
-          label = "Cell tag"
-        } else {
-          label = text.to_title(tag[:4]) + " " + text.to_lower(tag[4:])
-        }
-        cols.axes += [
-          {
-            "column": "tagValue" + tag,
-            "naRegex": "",
-            "spec": {
-              "name": "pl7.app/vdj/tagValueCELL",
-              "type": "String",
-              "annotations": {
-                "pl7.app/label": label,
-                "pl7.app/table/visibility": "default",
-                "pl7.app/table/orderPriority": string(priority)
+  cellTagsList := []
+  label := undefined
+  priority := 100000
+  if len(cellTags) > 0 {
+    for tag in cellTags {
+      if tag == "CELL" {
+        label = "Cell tag"
+      } else {
+        label = text.to_title(tag[:4]) + " " + text.to_lower(tag[4:])
+      }
+      cols.axes += [
+        {
+          "column": "tagValue" + tag,
+          "naRegex": "",
+          "spec": {
+            "name": "pl7.app/vdj/tagValueCELL",
+            "type": "String",
+            "domain": {
+              "pl7.app/blockId": blockId
+            },
+            "annotations": {
+              "pl7.app/label": label,
+              "pl7.app/table/visibility": "default",
+              "pl7.app/table/orderPriority": string(priority)
               }
             }
           }
@@ -1322,7 +1338,6 @@ getColumns := func(blockId, featureParams) {
         priority -= 1
       }
     }
-  }
 	return cols
 }
 

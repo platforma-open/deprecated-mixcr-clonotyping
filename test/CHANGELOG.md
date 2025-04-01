@@ -1,5 +1,47 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.test
 
+## 1.6.0
+
+### Minor Changes
+
+- b5e16e3: add additional species
+
+### Patch Changes
+
+- Updated dependencies [b5e16e3]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.9.0
+
+## 1.5.4
+
+### Patch Changes
+
+- 54b896e: Dependency upgrade
+- Updated dependencies [54b896e]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.3
+
+## 1.5.3
+
+### Patch Changes
+
+- 85dfbe9: Update pframes
+- Updated dependencies [85dfbe9]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.2
+
+## 1.5.2
+
+### Patch Changes
+
+- 494da6e: Update p-frames
+- Updated dependencies [494da6e]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.1
+
+## 1.5.1
+
+### Patch Changes
+
+- Updated dependencies [5ca4eb7]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.0
+
 ## 1.5.0
 
 ### Minor Changes

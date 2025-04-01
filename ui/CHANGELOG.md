@@ -1,5 +1,63 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.ui
 
+## 1.11.0
+
+### Minor Changes
+
+- b5e16e3: add additional species
+
+### Patch Changes
+
+- Updated dependencies [b5e16e3]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.9.0
+
+## 1.10.4
+
+### Patch Changes
+
+- 54b896e: Dependency upgrade
+- Updated dependencies [54b896e]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.3
+
+## 1.10.3
+
+### Patch Changes
+
+- 85dfbe9: Update pframes
+- Updated dependencies [85dfbe9]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.2
+
+## 1.10.2
+
+### Patch Changes
+
+- 494da6e: Update p-frames
+- Updated dependencies [494da6e]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.1
+
+## 1.10.1
+
+### Patch Changes
+
+- 885401d: Updated column types
+
+## 1.10.0
+
+### Minor Changes
+
+- 5ca4eb7: Check if custom library json file gzipped or not
+
+### Patch Changes
+
+- Updated dependencies [5ca4eb7]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.0
+
+## 1.9.1
+
+### Patch Changes
+
+- b049d9d: Minor migration to new UI SDK
+
 ## 1.9.0
 
 ### Minor Changes

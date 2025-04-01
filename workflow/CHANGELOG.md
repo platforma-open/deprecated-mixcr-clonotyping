@@ -1,5 +1,60 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.workflow
 
+## 1.18.1
+
+### Patch Changes
+
+- 54b896e: Dependency upgrade
+
+## 1.18.0
+
+### Minor Changes
+
+- 86a35ca: presets with cell tags and without cell group assembly are processed like single cell data
+
+## 1.17.2
+
+### Patch Changes
+
+- 85dfbe9: Update pframes
+
+## 1.17.1
+
+### Patch Changes
+
+- 494da6e: Update p-frames
+
+## 1.17.0
+
+### Minor Changes
+
+- 8343ccd: change the columns names where productive feature is using
+
+## 1.16.0
+
+### Minor Changes
+
+- a796b69: cell barcodes and feature bugs
+
+## 1.15.0
+
+### Minor Changes
+
+- 5ca4eb7: Check if custom library json file gzipped or not
+- a4dc2aa: Columns annotation for descrete filtering
+
+## 1.14.1
+
+### Patch Changes
+
+- b049d9d: SDK upgrade to fix sporadic validation errors in workflow execution
+
+## 1.14.0
+
+### Minor Changes
+
+- c6b6860: library added to processColumns in precess tpl
+
 ## 1.13.0
 
 ### Minor Changes

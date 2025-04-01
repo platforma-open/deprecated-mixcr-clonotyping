@@ -1,5 +1,35 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.model
 
+## 1.9.0
+
+### Minor Changes
+
+- b5e16e3: add additional species
+
+## 1.8.3
+
+### Patch Changes
+
+- 54b896e: Dependency upgrade
+
+## 1.8.2
+
+### Patch Changes
+
+- 85dfbe9: Update pframes
+
+## 1.8.1
+
+### Patch Changes
+
+- 494da6e: Update p-frames
+
+## 1.8.0
+
+### Minor Changes
+
+- 5ca4eb7: Check if custom library json file gzipped or not
+
 ## 1.7.0
 
 ### Minor Changes

@@ -34,6 +34,7 @@ self.body(func(inputs) {
 	limitInput := params.limitInput
 	blockId := params.blockId
 	presetCommonName := params.presetCommonName
+	isLibraryFileGzipped := params.isLibraryFileGzipped
 
 	presetContent := inputs.presetContent.getDataAsJson()
 	pfconvParams := inputs.pfconvParams
@@ -67,6 +68,13 @@ self.body(func(inputs) {
 			hasAssembleCells = true
 		}
 	}
+
+	hasCellTag := false
+	if len(presetContent.cellTags)>0 {
+		hasCellTag = true
+	}
+
+	isSingleCell := hasAssembleCells || hasCellTag
 
 	// calculating clns annotations
 
@@ -103,7 +111,7 @@ self.body(func(inputs) {
 	}
 
 	cColumnsAdditionalAxesSpec := []
-	if !hasAssembleCells {
+	if !isSingleCell {
 		cColumnsAdditionalAxesSpec = append(cColumnsAdditionalAxesSpec, {
 			"name": "pl7.app/vdj/chain",
 			"type": "String",
@@ -189,7 +197,7 @@ self.body(func(inputs) {
 	ll.assert(purifiedPfconvCfg.storageFormat == "Binary", "unexpected format")
 
 	innerPartitionLength := 0
-	if !hasAssembleCells {
+	if !isSingleCell {
 		innerPartitionLength = 1 // [chain]
 	}
 
@@ -230,8 +238,10 @@ self.body(func(inputs) {
 					limitInput: limitInput,
 					fileExtension: fileExtension,
 					reports: reports,
-					featureParams: featureParams
+					featureParams: featureParams,
+					isLibraryFileGzipped: isLibraryFileGzipped
 				},
+				library: library,
 				presetContent: presetContent,
 				pfconvParams: purifiedPfconvCfg
 			}

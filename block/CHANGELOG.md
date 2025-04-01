@@ -1,5 +1,109 @@
 # @platforma-open/milaboratories.mixcr-clonotyping
 
+## 1.8.22
+
+### Patch Changes
+
+- Updated dependencies [b5e16e3]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.9.0
+  - @platforma-open/milaboratories.mixcr-clonotyping.ui@1.11.0
+
+## 1.8.21
+
+### Patch Changes
+
+- 54b896e: Dependency upgrade
+- Updated dependencies [54b896e]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.3
+  - @platforma-open/milaboratories.mixcr-clonotyping.ui@1.10.4
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.18.1
+
+## 1.8.20
+
+### Patch Changes
+
+- 9bf65e0: updating dependecies
+
+## 1.8.19
+
+### Patch Changes
+
+- Updated dependencies [86a35ca]
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.18.0
+
+## 1.8.18
+
+### Patch Changes
+
+- 85dfbe9: Update pframes
+- Updated dependencies [85dfbe9]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.2
+  - @platforma-open/milaboratories.mixcr-clonotyping.ui@1.10.3
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.17.2
+
+## 1.8.17
+
+### Patch Changes
+
+- 494da6e: Update p-frames
+- Updated dependencies [494da6e]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.1
+  - @platforma-open/milaboratories.mixcr-clonotyping.ui@1.10.2
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.17.1
+
+## 1.8.16
+
+### Patch Changes
+
+- Updated dependencies [8343ccd]
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.17.0
+
+## 1.8.15
+
+### Patch Changes
+
+- 4294e77: Updated tags and ranking
+
+## 1.8.14
+
+### Patch Changes
+
+- Updated dependencies [a796b69]
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.16.0
+
+## 1.8.13
+
+### Patch Changes
+
+- Updated dependencies [885401d]
+  - @platforma-open/milaboratories.mixcr-clonotyping.ui@1.10.1
+
+## 1.8.12
+
+### Patch Changes
+
+- Updated dependencies [5ca4eb7]
+- Updated dependencies [a4dc2aa]
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.15.0
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.8.0
+  - @platforma-open/milaboratories.mixcr-clonotyping.ui@1.10.0
+
+## 1.8.11
+
+### Patch Changes
+
+- Updated dependencies [b049d9d]
+- Updated dependencies [b049d9d]
+  - @platforma-open/milaboratories.mixcr-clonotyping.ui@1.9.1
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.14.1
+
+## 1.8.10
+
+### Patch Changes
+
+- Updated dependencies [c6b6860]
+  - @platforma-open/milaboratories.mixcr-clonotyping.workflow@1.14.0
+
 ## 1.8.9
 
 ### Patch Changes

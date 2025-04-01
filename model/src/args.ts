@@ -9,6 +9,11 @@ const _Species = z.union([
   z.literal('lama'),
   z.literal('alpaca'),
   z.literal('mfas'),
+  z.literal('mmul'),
+  z.literal('rabbit'),
+  z.literal('rat'),
+  z.literal('sheep'),
+  z.literal('spalax'),
 ]);
 
 export const PresetName = z.object({
@@ -30,6 +35,7 @@ export const BlockArgsValid = z.object({
   input: PlRef,
   inputLibrary: PlRef.optional(),
   libraryFile: z.string().transform((v) => v as ImportFileHandle).optional(),
+  isLibraryFileGzipped: z.boolean().optional(),
   preset: Preset,
   species: z.string().optional(),
   customSpecies: z.string().optional(),
