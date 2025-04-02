@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.ui
 
+## 1.11.1
+
+### Patch Changes
+
+- c839e6a: Use AgGridVue Builder
+
 ## 1.11.0
 
 ### Minor Changes
