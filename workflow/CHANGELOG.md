@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.workflow
 
+## 1.19.0
+
+### Minor Changes
+
+- 1f073f6: Correct Productive discreteValues options
+
 ## 1.18.1
 
 ### Patch Changes
