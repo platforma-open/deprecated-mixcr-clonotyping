@@ -1,6 +1,7 @@
 ll := import("@platforma-sdk/workflow-tengo:ll")
 getFeature := import(":check-feature")
 text := import("text")
+json := import("json")
 
 formatId := func(input) {
     cleanNumbers := text.re_replace(`\(\s*-?\d+(\s*,\s*-?\d+)*\s*\)`, input, "")
@@ -950,7 +951,7 @@ getColumns := func(blockId, featureParams) {
           "annotations": {
             "pl7.app/label": "Productive",
             "pl7.app/isDiscreteFilter": "true",
-            "pl7.app/discreteValues": "['true', 'false']",
+            "pl7.app/discreteValues": string(json.encode(["true", "false"])),
             "pl7.app/table/visibility": "default",
             "pl7.app/table/orderPriority": "21400"
           }
