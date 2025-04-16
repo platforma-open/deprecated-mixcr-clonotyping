@@ -24,7 +24,7 @@
       "ui": "@platforma-open/milaboratories.mixcr-clonotyping.ui/dist"
     },
     "meta": {
-      "title": "MiXCR Clonotyping",
+      "title": "MiXCR Clonotyping (Deprecated)",
       "logo": "file:../logos/block-logo.png",
       "url": "https://github.com/milaboratory/block-mixcr-clonotyping",
       "docs": "https://github.com/milaboratory/block-mixcr-clonotyping/docs",
@@ -42,7 +42,7 @@
         "url": "https://milaboratories.com/",
         "logo": "file:../logos/organization-logo.png"
       },
-      "marketplaceRanking": 16900
+      "marketplaceRanking": 1030
     }
   },
   "devDependencies": {
