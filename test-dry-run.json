@@ -1,0 +1,857 @@
+
+> @platforma-open/milaboratories.mixcr-clonotyping@ test:dry-run /home/runner/work/deprecated-mixcr-clonotyping/deprecated-mixcr-clonotyping
+> PL_PKG_DEV=local turbo run test --dry-run=json
+
+{
+  "id": "2zjeGzxPV2qLvk6m2S337ZWjVGy",
+  "version": "1",
+  "turboVersion": "2.4.4",
+  "monorepo": true,
+  "globalCacheInputs": {
+    "rootKey": "I can’t see ya, but I know you’re here",
+    "files": {},
+    "hashOfExternalDependencies": "5becdbe92b626c5b",
+    "hashOfInternalDependencies": "",
+    "environmentVariables": {
+      "specified": {
+        "env": [],
+        "passThroughEnv": null
+      },
+      "configured": [],
+      "inferred": [],
+      "passthrough": null
+    },
+    "engines": null
+  },
+  "packages": [
+    "@platforma-open/milaboratories.mixcr-clonotyping",
+    "@platforma-open/milaboratories.mixcr-clonotyping.model",
+    "@platforma-open/milaboratories.mixcr-clonotyping.test",
+    "@platforma-open/milaboratories.mixcr-clonotyping.ui",
+    "@platforma-open/milaboratories.mixcr-clonotyping.workflow"
+  ],
+  "envMode": "strict",
+  "frameworkInference": true,
+  "tasks": [
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping#build",
+      "task": "build",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping",
+      "hash": "96a243e5d17158b4",
+      "inputs": {
+        "CHANGELOG.md": "16dbeb38fecc3ab56843e0cee54075eb4ffea815",
+        "index.d.ts": "1ba908d82f37b11a66fc326a88a79ee6ef965fc7",
+        "index.js": "e7798d420641e13b2104408b1cf4df20f67c654e",
+        "package.json": "ff3ad85072c28649f17b64bc4aa9742eeb3a3a63"
+      },
+      "hashOfExternalDependencies": "babde95917585274",
+      "cache": {
+        "local": true,
+        "remote": false,
+        "status": "HIT",
+        "source": "LOCAL",
+        "timeSaved": 1705
+      },
+      "command": "rm -rf ./block-pack && block-tools pack",
+      "cliArguments": [],
+      "outputs": [
+        "./block-pack/**",
+        "./dist/**"
+      ],
+      "excludedOutputs": null,
+      "logFile": "block/.turbo/turbo-build.log",
+      "directory": "block",
+      "dependencies": [
+        "@platforma-open/milaboratories.mixcr-clonotyping.model#build",
+        "@platforma-open/milaboratories.mixcr-clonotyping.ui#build",
+        "@platforma-open/milaboratories.mixcr-clonotyping.workflow#build"
+      ],
+      "dependents": [
+        "@platforma-open/milaboratories.mixcr-clonotyping#test",
+        "@platforma-open/milaboratories.mixcr-clonotyping.test#build"
+      ],
+      "resolvedTaskDefinition": {
+        "outputs": [
+          "./block-pack/**",
+          "./dist/**"
+        ],
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "$TURBO_DEFAULT$"
+        ],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping#test",
+      "task": "test",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping",
+      "hash": "55e969fb3bf0b01f",
+      "inputs": {
+        "CHANGELOG.md": "16dbeb38fecc3ab56843e0cee54075eb4ffea815",
+        "index.d.ts": "1ba908d82f37b11a66fc326a88a79ee6ef965fc7",
+        "index.js": "e7798d420641e13b2104408b1cf4df20f67c654e",
+        "package.json": "ff3ad85072c28649f17b64bc4aa9742eeb3a3a63"
+      },
+      "hashOfExternalDependencies": "babde95917585274",
+      "cache": {
+        "local": false,
+        "remote": false,
+        "status": "MISS",
+        "timeSaved": 0
+      },
+      "command": "<NONEXISTENT>",
+      "cliArguments": [],
+      "outputs": null,
+      "excludedOutputs": null,
+      "logFile": "block/.turbo/turbo-test.log",
+      "directory": "block",
+      "dependencies": [
+        "@platforma-open/milaboratories.mixcr-clonotyping#build"
+      ],
+      "dependents": [],
+      "resolvedTaskDefinition": {
+        "outputs": [],
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": [
+          "DEBUG",
+          "PL_ADDRESS",
+          "PL_TEST_PASSWORD",
+          "PL_TEST_PROXY",
+          "PL_TEST_USER"
+        ],
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": [
+            "DEBUG",
+            "PL_ADDRESS",
+            "PL_TEST_PASSWORD",
+            "PL_TEST_PROXY",
+            "PL_TEST_USER"
+          ]
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": [
+          "PL_ADDRESS=83f9c7fec1cc29c9c3d71b605baa76ebebe1a51c052c0bfad1e37e9883b994fa",
+          "PL_TEST_PASSWORD=c638833f69bbfb3c267afa0a74434812436b8f08a81fd263c6be6871de4f1265",
+          "PL_TEST_USER=f85ac825d102b9f2d546aa1679ea991ae845994c1343730d564f3fcd0a2168c3"
+        ]
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.model#build",
+      "task": "build",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping.model",
+      "hash": "2456622c58811d88",
+      "inputs": {
+        "CHANGELOG.md": "b8c0de0e349d72dd7ea933ac27eb15a52f70a58a",
+        "eslint.config.mjs": "0c8c7ff451678d3ed2767ddd0d018c90d3317298",
+        "package.json": "b5c89ee39568bea77430e28c5525eca956cff725",
+        "src/args.ts": "0baaf3e472fd8445b86f2148d41a6f4cfa59bbb7",
+        "src/base32-encode.ts": "a8e75f9a9c8936f676f01034cf0d24c387880c2c",
+        "src/helpers.ts": "e2ad97ea8026430e71e111de6f0e43bc5ad6a6a6",
+        "src/index.ts": "ca46b0c0e7ab181e4da287b61d8941f9b0aa7fca",
+        "src/preset.ts": "7e61522e9803e6f8e1c9ffc148e60f5353452d91",
+        "src/progress.test.ts": "408ae3584a6e583c6f874d9eeeb799814385bd5d",
+        "src/progress.ts": "edd337fe7705fcff9ae8378a7679476a24c1bf03",
+        "src/qc.test.ts": "2dd1847e75338c34c62b2f43d748c50b4a21d120",
+        "src/qc.ts": "00e7aa92f4889872d238364fc8c6a5d3b66d604c",
+        "src/report.test.ts": "fd5d478f8232ed7fd99375003ee056ec497196ce",
+        "src/reports.ts": "07e3d987e628f45b2d87aefd190581cc95f9e066",
+        "tsconfig.json": "4593cbadcd4a4144c813512c01f58573b4b0425c",
+        "vite.config.mts": "a500058540e1b93dbfd5840e46f7823affd46a97",
+        "vitest.config.mts": "d0d1b5e288dd7913deea21698b81b68641c465a0"
+      },
+      "hashOfExternalDependencies": "3a822d1f658608f6",
+      "cache": {
+        "local": true,
+        "remote": false,
+        "status": "HIT",
+        "source": "LOCAL",
+        "timeSaved": 6233
+      },
+      "command": "tsup && vite build && block-tools build-model",
+      "cliArguments": [],
+      "outputs": [
+        "./block-pack/**",
+        "./dist/**"
+      ],
+      "excludedOutputs": null,
+      "logFile": "model/.turbo/turbo-build.log",
+      "directory": "model",
+      "dependencies": [],
+      "dependents": [
+        "@platforma-open/milaboratories.mixcr-clonotyping#build",
+        "@platforma-open/milaboratories.mixcr-clonotyping.model#test",
+        "@platforma-open/milaboratories.mixcr-clonotyping.test#build",
+        "@platforma-open/milaboratories.mixcr-clonotyping.ui#build"
+      ],
+      "resolvedTaskDefinition": {
+        "outputs": [
+          "./block-pack/**",
+          "./dist/**"
+        ],
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "$TURBO_DEFAULT$"
+        ],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "vite",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.model#test",
+      "task": "test",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping.model",
+      "hash": "6bcb77bac7bcf9c3",
+      "inputs": {
+        "CHANGELOG.md": "b8c0de0e349d72dd7ea933ac27eb15a52f70a58a",
+        "eslint.config.mjs": "0c8c7ff451678d3ed2767ddd0d018c90d3317298",
+        "package.json": "b5c89ee39568bea77430e28c5525eca956cff725",
+        "src/args.ts": "0baaf3e472fd8445b86f2148d41a6f4cfa59bbb7",
+        "src/base32-encode.ts": "a8e75f9a9c8936f676f01034cf0d24c387880c2c",
+        "src/helpers.ts": "e2ad97ea8026430e71e111de6f0e43bc5ad6a6a6",
+        "src/index.ts": "ca46b0c0e7ab181e4da287b61d8941f9b0aa7fca",
+        "src/preset.ts": "7e61522e9803e6f8e1c9ffc148e60f5353452d91",
+        "src/progress.test.ts": "408ae3584a6e583c6f874d9eeeb799814385bd5d",
+        "src/progress.ts": "edd337fe7705fcff9ae8378a7679476a24c1bf03",
+        "src/qc.test.ts": "2dd1847e75338c34c62b2f43d748c50b4a21d120",
+        "src/qc.ts": "00e7aa92f4889872d238364fc8c6a5d3b66d604c",
+        "src/report.test.ts": "fd5d478f8232ed7fd99375003ee056ec497196ce",
+        "src/reports.ts": "07e3d987e628f45b2d87aefd190581cc95f9e066",
+        "tsconfig.json": "4593cbadcd4a4144c813512c01f58573b4b0425c",
+        "vite.config.mts": "a500058540e1b93dbfd5840e46f7823affd46a97",
+        "vitest.config.mts": "d0d1b5e288dd7913deea21698b81b68641c465a0"
+      },
+      "hashOfExternalDependencies": "3a822d1f658608f6",
+      "cache": {
+        "local": false,
+        "remote": false,
+        "status": "MISS",
+        "timeSaved": 0
+      },
+      "command": "vitest",
+      "cliArguments": [],
+      "outputs": null,
+      "excludedOutputs": null,
+      "logFile": "model/.turbo/turbo-test.log",
+      "directory": "model",
+      "dependencies": [
+        "@platforma-open/milaboratories.mixcr-clonotyping.model#build"
+      ],
+      "dependents": [],
+      "resolvedTaskDefinition": {
+        "outputs": [],
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": [
+          "DEBUG",
+          "PL_ADDRESS",
+          "PL_TEST_PASSWORD",
+          "PL_TEST_PROXY",
+          "PL_TEST_USER"
+        ],
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "vite",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": [
+            "DEBUG",
+            "PL_ADDRESS",
+            "PL_TEST_PASSWORD",
+            "PL_TEST_PROXY",
+            "PL_TEST_USER"
+          ]
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": [
+          "PL_ADDRESS=83f9c7fec1cc29c9c3d71b605baa76ebebe1a51c052c0bfad1e37e9883b994fa",
+          "PL_TEST_PASSWORD=c638833f69bbfb3c267afa0a74434812436b8f08a81fd263c6be6871de4f1265",
+          "PL_TEST_USER=f85ac825d102b9f2d546aa1679ea991ae845994c1343730d564f3fcd0a2168c3"
+        ]
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.test#build",
+      "task": "build",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping.test",
+      "hash": "c4e96dac71ff1eae",
+      "inputs": {
+        "CHANGELOG.md": "dc9844dbed6dfe4ff5c073b719c4ced3fd9039b0",
+        "assets/.gitkeep": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "assets/expected_results/.gitignore": "fbdfe9aac3993afb2959271dc98175fa567071fe",
+        "assets/expected_results/mixcr.sh": "ae9684890fbf724c09777f658a50ba1ecaf402cc",
+        "assets/expected_results/pfconv.sh": "69f3b222de8516f6a498dfe57ed55e3a1ebff684",
+        "assets/small_data_R1.fastq.gz": "78e126e7f7d6a5a21dff0ce18334fe5cf0cce622",
+        "assets/small_data_R2.fastq.gz": "0f80a37feffeba95e018ef60ff1dde37e1ba68f4",
+        "package.json": "72c50f87aa2e0a166d16c435b56b8ddaaa04c9be",
+        "src/wf.test.ts": "474c841b3d44af598ec0da1d9154f1afb2c65595",
+        "test_config.json": "297c77f86aa4e27de9eebc853961a3f95887c85c",
+        "tsconfig.json": "64ebfa332d028a50e3ddadaab4ad97b44a191599",
+        "vitest.config.mts": "0e0760593af15a3fa0379d709cae7624753191bf"
+      },
+      "hashOfExternalDependencies": "db3b3009ddfd489a",
+      "cache": {
+        "local": false,
+        "remote": false,
+        "status": "MISS",
+        "timeSaved": 0
+      },
+      "command": "<NONEXISTENT>",
+      "cliArguments": [],
+      "outputs": [
+        "./block-pack/**",
+        "./dist/**"
+      ],
+      "excludedOutputs": null,
+      "logFile": "test/.turbo/turbo-build.log",
+      "directory": "test",
+      "dependencies": [
+        "@platforma-open/milaboratories.mixcr-clonotyping#build",
+        "@platforma-open/milaboratories.mixcr-clonotyping.model#build"
+      ],
+      "dependents": [
+        "@platforma-open/milaboratories.mixcr-clonotyping.test#test"
+      ],
+      "resolvedTaskDefinition": {
+        "outputs": [
+          "./block-pack/**",
+          "./dist/**"
+        ],
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "$TURBO_DEFAULT$"
+        ],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.test#test",
+      "task": "test",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping.test",
+      "hash": "29269c82aa5df6b3",
+      "inputs": {
+        "CHANGELOG.md": "dc9844dbed6dfe4ff5c073b719c4ced3fd9039b0",
+        "assets/.gitkeep": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "assets/expected_results/.gitignore": "fbdfe9aac3993afb2959271dc98175fa567071fe",
+        "assets/expected_results/mixcr.sh": "ae9684890fbf724c09777f658a50ba1ecaf402cc",
+        "assets/expected_results/pfconv.sh": "69f3b222de8516f6a498dfe57ed55e3a1ebff684",
+        "assets/small_data_R1.fastq.gz": "78e126e7f7d6a5a21dff0ce18334fe5cf0cce622",
+        "assets/small_data_R2.fastq.gz": "0f80a37feffeba95e018ef60ff1dde37e1ba68f4",
+        "package.json": "72c50f87aa2e0a166d16c435b56b8ddaaa04c9be",
+        "src/wf.test.ts": "474c841b3d44af598ec0da1d9154f1afb2c65595",
+        "test_config.json": "297c77f86aa4e27de9eebc853961a3f95887c85c",
+        "tsconfig.json": "64ebfa332d028a50e3ddadaab4ad97b44a191599",
+        "vitest.config.mts": "0e0760593af15a3fa0379d709cae7624753191bf"
+      },
+      "hashOfExternalDependencies": "db3b3009ddfd489a",
+      "cache": {
+        "local": false,
+        "remote": false,
+        "status": "MISS",
+        "timeSaved": 0
+      },
+      "command": "vitest",
+      "cliArguments": [],
+      "outputs": null,
+      "excludedOutputs": null,
+      "logFile": "test/.turbo/turbo-test.log",
+      "directory": "test",
+      "dependencies": [
+        "@platforma-open/milaboratories.mixcr-clonotyping.test#build"
+      ],
+      "dependents": [],
+      "resolvedTaskDefinition": {
+        "outputs": [],
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": [
+          "DEBUG",
+          "PL_ADDRESS",
+          "PL_TEST_PASSWORD",
+          "PL_TEST_PROXY",
+          "PL_TEST_USER"
+        ],
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": [
+            "DEBUG",
+            "PL_ADDRESS",
+            "PL_TEST_PASSWORD",
+            "PL_TEST_PROXY",
+            "PL_TEST_USER"
+          ]
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": [
+          "PL_ADDRESS=83f9c7fec1cc29c9c3d71b605baa76ebebe1a51c052c0bfad1e37e9883b994fa",
+          "PL_TEST_PASSWORD=c638833f69bbfb3c267afa0a74434812436b8f08a81fd263c6be6871de4f1265",
+          "PL_TEST_USER=f85ac825d102b9f2d546aa1679ea991ae845994c1343730d564f3fcd0a2168c3"
+        ]
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.ui#build",
+      "task": "build",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping.ui",
+      "hash": "53582b9886c86526",
+      "inputs": {
+        "CHANGELOG.md": "207570e4fea03e36ce116082062362c7cbb88b97",
+        "eslint.config.mjs": "30e2871b6d4cc4776ac969c3a0e034a23e2fe766",
+        "index.html": "e37ab12ef6090a1380237b55964f225b48d02cfc",
+        "package.json": "3ab343233908b7156171f19c3da900dca35e4f73",
+        "src/MainPage.vue": "2ee936c80ba9ed101b9c316a6521a772244523d8",
+        "src/MainPageWrapper.vue": "2c640972eb002ddca80fd79e8f91981684bdb269",
+        "src/SampleReportPanel.vue": "87cf2d39b3d2e5d72d83c9dc005d9abef055f16c",
+        "src/SampleReportPanelLogs.vue": "b560bafb3d2d728f711bdff595a7a11a3ca85254",
+        "src/SampleReportPanelQc.vue": "ef549e9f5d00d2e708f320d4d0b4334391457b9d",
+        "src/SampleReportPanelReports.vue": "3151da2a6de5ff9530fa0acfb11ca02409b37ba5",
+        "src/SampleReportPanelVisualReport.vue": "3cba2d4b0757c8001fe6d61a6a5ae39a3f474cc2",
+        "src/SettingsPanel.vue": "e27efa29b903890e622a06015a8207d5efa45b30",
+        "src/app.ts": "c1ba0aa42d6cf452609a488e915d7d56a89796de",
+        "src/charts/AlignmentsChart.vue": "b11364f493541103ff47a2e7f065adf742b0405b",
+        "src/charts/ChainsChart.vue": "51173c783eeae46397524ad8b1e01d95efbf033f",
+        "src/charts/alignmentChartSettings.ts": "1203ef8e02fbf372f01dec40d6347cc9c306be42",
+        "src/charts/chainsChartSettings.ts": "c42f251933257db2df8be939454af431a62d3e2d",
+        "src/components/QcSection.vue": "003b2ddc72c09df3b766252f1fe76dfa153dc4a2",
+        "src/components/QualityLabel.vue": "c04e00de44433f6e9425a3e6bb8966ffb42b1a3d",
+        "src/debug/alignerReport.json": "68580ef3fbdba48f15c6944b9998f6ac45ed539b",
+        "src/main.ts": "a7d29c169ac806a6d3d8fe37245af74a351f6c88",
+        "src/parseProgress.ts": "98981faa16c4af3b80cb022b1ad0716181eae73d",
+        "src/results.ts": "169de37763aab8a4043deb4642edc9459856950e",
+        "src/retentive.ts": "843c8bb3dd84ce2405dfa38164a6f72f20d60ee2",
+        "src/util.ts": "978831b6d4709b00d5ea586a26304bc1d4020496",
+        "tsconfig.app.json": "253816c78177577b3c07b4586e714c46808ee423",
+        "tsconfig.json": "ea9d0cd8255683d84f125948115daf1de0f06b1f",
+        "tsconfig.node.json": "3afdd6e38438be7612befbd4b656af7bed27a31a",
+        "vite.config.ts": "5bb22bd23d0cee9391b60c31de47bf351000e875",
+        "vitest.config.mts": "d0d1b5e288dd7913deea21698b81b68641c465a0"
+      },
+      "hashOfExternalDependencies": "784bdd514c67470d",
+      "cache": {
+        "local": true,
+        "remote": false,
+        "status": "HIT",
+        "source": "LOCAL",
+        "timeSaved": 14968
+      },
+      "command": "vue-tsc -b && vite build",
+      "cliArguments": [],
+      "outputs": [
+        "./block-pack/**",
+        "./dist/**"
+      ],
+      "excludedOutputs": null,
+      "logFile": "ui/.turbo/turbo-build.log",
+      "directory": "ui",
+      "dependencies": [
+        "@platforma-open/milaboratories.mixcr-clonotyping.model#build"
+      ],
+      "dependents": [
+        "@platforma-open/milaboratories.mixcr-clonotyping#build",
+        "@platforma-open/milaboratories.mixcr-clonotyping.ui#test"
+      ],
+      "resolvedTaskDefinition": {
+        "outputs": [
+          "./block-pack/**",
+          "./dist/**"
+        ],
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "$TURBO_DEFAULT$"
+        ],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "vite",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.ui#test",
+      "task": "test",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping.ui",
+      "hash": "8a3f57a849c53177",
+      "inputs": {
+        "CHANGELOG.md": "207570e4fea03e36ce116082062362c7cbb88b97",
+        "eslint.config.mjs": "30e2871b6d4cc4776ac969c3a0e034a23e2fe766",
+        "index.html": "e37ab12ef6090a1380237b55964f225b48d02cfc",
+        "package.json": "3ab343233908b7156171f19c3da900dca35e4f73",
+        "src/MainPage.vue": "2ee936c80ba9ed101b9c316a6521a772244523d8",
+        "src/MainPageWrapper.vue": "2c640972eb002ddca80fd79e8f91981684bdb269",
+        "src/SampleReportPanel.vue": "87cf2d39b3d2e5d72d83c9dc005d9abef055f16c",
+        "src/SampleReportPanelLogs.vue": "b560bafb3d2d728f711bdff595a7a11a3ca85254",
+        "src/SampleReportPanelQc.vue": "ef549e9f5d00d2e708f320d4d0b4334391457b9d",
+        "src/SampleReportPanelReports.vue": "3151da2a6de5ff9530fa0acfb11ca02409b37ba5",
+        "src/SampleReportPanelVisualReport.vue": "3cba2d4b0757c8001fe6d61a6a5ae39a3f474cc2",
+        "src/SettingsPanel.vue": "e27efa29b903890e622a06015a8207d5efa45b30",
+        "src/app.ts": "c1ba0aa42d6cf452609a488e915d7d56a89796de",
+        "src/charts/AlignmentsChart.vue": "b11364f493541103ff47a2e7f065adf742b0405b",
+        "src/charts/ChainsChart.vue": "51173c783eeae46397524ad8b1e01d95efbf033f",
+        "src/charts/alignmentChartSettings.ts": "1203ef8e02fbf372f01dec40d6347cc9c306be42",
+        "src/charts/chainsChartSettings.ts": "c42f251933257db2df8be939454af431a62d3e2d",
+        "src/components/QcSection.vue": "003b2ddc72c09df3b766252f1fe76dfa153dc4a2",
+        "src/components/QualityLabel.vue": "c04e00de44433f6e9425a3e6bb8966ffb42b1a3d",
+        "src/debug/alignerReport.json": "68580ef3fbdba48f15c6944b9998f6ac45ed539b",
+        "src/main.ts": "a7d29c169ac806a6d3d8fe37245af74a351f6c88",
+        "src/parseProgress.ts": "98981faa16c4af3b80cb022b1ad0716181eae73d",
+        "src/results.ts": "169de37763aab8a4043deb4642edc9459856950e",
+        "src/retentive.ts": "843c8bb3dd84ce2405dfa38164a6f72f20d60ee2",
+        "src/util.ts": "978831b6d4709b00d5ea586a26304bc1d4020496",
+        "tsconfig.app.json": "253816c78177577b3c07b4586e714c46808ee423",
+        "tsconfig.json": "ea9d0cd8255683d84f125948115daf1de0f06b1f",
+        "tsconfig.node.json": "3afdd6e38438be7612befbd4b656af7bed27a31a",
+        "vite.config.ts": "5bb22bd23d0cee9391b60c31de47bf351000e875",
+        "vitest.config.mts": "d0d1b5e288dd7913deea21698b81b68641c465a0"
+      },
+      "hashOfExternalDependencies": "784bdd514c67470d",
+      "cache": {
+        "local": false,
+        "remote": false,
+        "status": "MISS",
+        "timeSaved": 0
+      },
+      "command": "<NONEXISTENT>",
+      "cliArguments": [],
+      "outputs": null,
+      "excludedOutputs": null,
+      "logFile": "ui/.turbo/turbo-test.log",
+      "directory": "ui",
+      "dependencies": [
+        "@platforma-open/milaboratories.mixcr-clonotyping.ui#build"
+      ],
+      "dependents": [],
+      "resolvedTaskDefinition": {
+        "outputs": [],
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": [
+          "DEBUG",
+          "PL_ADDRESS",
+          "PL_TEST_PASSWORD",
+          "PL_TEST_PROXY",
+          "PL_TEST_USER"
+        ],
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "vite",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": [
+            "DEBUG",
+            "PL_ADDRESS",
+            "PL_TEST_PASSWORD",
+            "PL_TEST_PROXY",
+            "PL_TEST_USER"
+          ]
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": [
+          "PL_ADDRESS=83f9c7fec1cc29c9c3d71b605baa76ebebe1a51c052c0bfad1e37e9883b994fa",
+          "PL_TEST_PASSWORD=c638833f69bbfb3c267afa0a74434812436b8f08a81fd263c6be6871de4f1265",
+          "PL_TEST_USER=f85ac825d102b9f2d546aa1679ea991ae845994c1343730d564f3fcd0a2168c3"
+        ]
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.workflow#build",
+      "task": "build",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping.workflow",
+      "hash": "40fa9894c67664c1",
+      "inputs": {
+        "CHANGELOG.md": "716c087d8e969dcbff30b70ea8a1a5f89a0d096b",
+        "format.el": "b168a1ac097463794e06d0e92c1e11da73486887",
+        "package.json": "841b6a0127dfb520b72a105a0ac22756281b3184",
+        "scripts/build-static.mjs": "060c96cd05ad47d2733fcfcea37f941a70804ef3",
+        "src/calculate-pfconv-params.tpl.tengo": "480f48e9e815588007daa4a4a05c86f06290e873",
+        "src/check-feature.lib.tengo": "5ca4898562624bd86e4e17875529ea52fd8bc922",
+        "src/export-clones-bulk.tpl.tengo": "190afb32eb5cf14532aac64242c9b72f15ec4b50",
+        "src/get-preset.tpl.tengo": "69e7c868365b0795c04df0798a5478846f3bf0e4",
+        "src/list-presets.tpl.tengo": "27da33af5546d4601efe625ca272c9e2090c6bcb",
+        "src/main.tpl.tengo": "dd66a17858b0b2b0ca0091084fd8afeff91a72f6",
+        "src/mixcr-analyze.tpl.tengo": "a9c30513c4e36869d91d58cb2a9bd20692b745fd",
+        "src/mixcr.lib.tengo": "7735397985232ee62c1f80cc606a14b749fa817d",
+        "src/pfconv_params.lib.tengo": "de72d34120dbfe0cfed75b8383f421a591720434",
+        "src/prerun.tpl.tengo": "ff82918937bdbbf759af1336bffd7dd3d884fbc5",
+        "src/process.tpl.tengo": "4c8406197da101aef851155fee76f51b3066e8a3",
+        "src/test/columns.test.tpl.tengo": "4dca65e67fdcff20c4b2772dcb93118dd82aaf06",
+        "src/test/columns.test.ts": "0881793c174ad41a54bb80babfa4071a057d159c",
+        "tsconfig.json": "0d3f6ef3c7eda614a600412e813ed60c6974f9f2",
+        "vitest.config.mts": "db095fa475d2b0eb823c647646aa5d2bdbf162e2"
+      },
+      "hashOfExternalDependencies": "19593eb4a4920e2d",
+      "cache": {
+        "local": true,
+        "remote": false,
+        "status": "HIT",
+        "source": "LOCAL",
+        "timeSaved": 62589
+      },
+      "command": "rm -rf dist && pl-tengo check && pl-tengo build",
+      "cliArguments": [],
+      "outputs": [
+        "./block-pack/**",
+        "./dist/**"
+      ],
+      "excludedOutputs": null,
+      "logFile": "workflow/.turbo/turbo-build.log",
+      "directory": "workflow",
+      "dependencies": [],
+      "dependents": [
+        "@platforma-open/milaboratories.mixcr-clonotyping#build",
+        "@platforma-open/milaboratories.mixcr-clonotyping.workflow#test"
+      ],
+      "resolvedTaskDefinition": {
+        "outputs": [
+          "./block-pack/**",
+          "./dist/**"
+        ],
+        "cache": true,
+        "dependsOn": [
+          "^build"
+        ],
+        "inputs": [
+          "$TURBO_DEFAULT$"
+        ],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": null,
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": null
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": null
+      }
+    },
+    {
+      "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.workflow#test",
+      "task": "test",
+      "package": "@platforma-open/milaboratories.mixcr-clonotyping.workflow",
+      "hash": "68e80100315ea449",
+      "inputs": {
+        "CHANGELOG.md": "716c087d8e969dcbff30b70ea8a1a5f89a0d096b",
+        "format.el": "b168a1ac097463794e06d0e92c1e11da73486887",
+        "package.json": "841b6a0127dfb520b72a105a0ac22756281b3184",
+        "scripts/build-static.mjs": "060c96cd05ad47d2733fcfcea37f941a70804ef3",
+        "src/calculate-pfconv-params.tpl.tengo": "480f48e9e815588007daa4a4a05c86f06290e873",
+        "src/check-feature.lib.tengo": "5ca4898562624bd86e4e17875529ea52fd8bc922",
+        "src/export-clones-bulk.tpl.tengo": "190afb32eb5cf14532aac64242c9b72f15ec4b50",
+        "src/get-preset.tpl.tengo": "69e7c868365b0795c04df0798a5478846f3bf0e4",
+        "src/list-presets.tpl.tengo": "27da33af5546d4601efe625ca272c9e2090c6bcb",
+        "src/main.tpl.tengo": "dd66a17858b0b2b0ca0091084fd8afeff91a72f6",
+        "src/mixcr-analyze.tpl.tengo": "a9c30513c4e36869d91d58cb2a9bd20692b745fd",
+        "src/mixcr.lib.tengo": "7735397985232ee62c1f80cc606a14b749fa817d",
+        "src/pfconv_params.lib.tengo": "de72d34120dbfe0cfed75b8383f421a591720434",
+        "src/prerun.tpl.tengo": "ff82918937bdbbf759af1336bffd7dd3d884fbc5",
+        "src/process.tpl.tengo": "4c8406197da101aef851155fee76f51b3066e8a3",
+        "src/test/columns.test.tpl.tengo": "4dca65e67fdcff20c4b2772dcb93118dd82aaf06",
+        "src/test/columns.test.ts": "0881793c174ad41a54bb80babfa4071a057d159c",
+        "tsconfig.json": "0d3f6ef3c7eda614a600412e813ed60c6974f9f2",
+        "vitest.config.mts": "db095fa475d2b0eb823c647646aa5d2bdbf162e2"
+      },
+      "hashOfExternalDependencies": "19593eb4a4920e2d",
+      "cache": {
+        "local": false,
+        "remote": false,
+        "status": "MISS",
+        "timeSaved": 0
+      },
+      "command": "vitest",
+      "cliArguments": [],
+      "outputs": null,
+      "excludedOutputs": null,
+      "logFile": "workflow/.turbo/turbo-test.log",
+      "directory": "workflow",
+      "dependencies": [
+        "@platforma-open/milaboratories.mixcr-clonotyping.workflow#build"
+      ],
+      "dependents": [],
+      "resolvedTaskDefinition": {
+        "outputs": [],
+        "cache": true,
+        "dependsOn": [
+          "build"
+        ],
+        "inputs": [],
+        "outputLogs": "full",
+        "persistent": false,
+        "interruptible": false,
+        "env": [],
+        "passThroughEnv": [
+          "DEBUG",
+          "PL_ADDRESS",
+          "PL_TEST_PASSWORD",
+          "PL_TEST_PROXY",
+          "PL_TEST_USER"
+        ],
+        "interactive": false
+      },
+      "expandedOutputs": [],
+      "framework": "",
+      "envMode": "strict",
+      "environmentVariables": {
+        "specified": {
+          "env": [],
+          "passThroughEnv": [
+            "DEBUG",
+            "PL_ADDRESS",
+            "PL_TEST_PASSWORD",
+            "PL_TEST_PROXY",
+            "PL_TEST_USER"
+          ]
+        },
+        "configured": [],
+        "inferred": [],
+        "passthrough": [
+          "PL_ADDRESS=83f9c7fec1cc29c9c3d71b605baa76ebebe1a51c052c0bfad1e37e9883b994fa",
+          "PL_TEST_PASSWORD=c638833f69bbfb3c267afa0a74434812436b8f08a81fd263c6be6871de4f1265",
+          "PL_TEST_USER=f85ac825d102b9f2d546aa1679ea991ae845994c1343730d564f3fcd0a2168c3"
+        ]
+      }
+    }
+  ],
+  "user": "github-merge-queue[bot]",
+  "scm": {
+    "type": "git",
+    "sha": "69553ba47b856a23bf9f8c7eba931974e10a27ca",
+    "branch": "main"
+  }
+}
+

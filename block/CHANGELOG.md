@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping
 
+## 1.8.26
+
+### Patch Changes
+
+- f7e70d5: Add deprecated label to block
+
 ## 1.8.25
 
 ### Patch Changes
