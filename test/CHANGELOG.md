@@ -1,5 +1,13 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.test
 
+## 1.6.1
+
+### Patch Changes
+
+- ac07429: Fix "deprecated" meta flag
+- Updated dependencies [ac07429]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.9.1
+
 ## 1.6.0
 
 ### Minor Changes

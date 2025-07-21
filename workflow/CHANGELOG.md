@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.workflow
 
+## 1.19.1
+
+### Patch Changes
+
+- ac07429: Fix "deprecated" meta flag
+
 ## 1.19.0
 
 ### Minor Changes
