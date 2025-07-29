@@ -3,7 +3,7 @@
 > PL_PKG_DEV=local turbo run test --dry-run=json
 
 {
-  "id": "30BgCVH3kcz7vupYnY6PZPTC3Sn",
+  "id": "30YHz9u8dDEMiUe3FQf71Mi5EMw",
   "version": "1",
   "turboVersion": "2.4.4",
   "monorepo": true,
@@ -37,12 +37,12 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping#build",
       "task": "build",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping",
-      "hash": "b2c74743c9b6ea48",
+      "hash": "5bd04664b048d8be",
       "inputs": {
-        "CHANGELOG.md": "0e91a5fd2cf25a124dc638227c4aa48f51e4e7db",
+        "CHANGELOG.md": "4f46990014b3546a80ab5ea531bc2b64f50b291a",
         "index.d.ts": "1ba908d82f37b11a66fc326a88a79ee6ef965fc7",
         "index.js": "e7798d420641e13b2104408b1cf4df20f67c654e",
-        "package.json": "6f741b6e43ee9ca6ca4a5b59252ac47fb0890ca6"
+        "package.json": "8e7087318a841f9762c4db25b645be7200edc97c"
       },
       "hashOfExternalDependencies": "92e077bcfc370e63",
       "cache": {
@@ -50,7 +50,7 @@
         "remote": false,
         "status": "HIT",
         "source": "LOCAL",
-        "timeSaved": 1903
+        "timeSaved": 1692
       },
       "command": "rm -rf ./block-pack && block-tools pack",
       "cliArguments": [],
@@ -106,12 +106,12 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping#test",
       "task": "test",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping",
-      "hash": "76cbd3f6ef0ccf35",
+      "hash": "57bc809794bae50f",
       "inputs": {
-        "CHANGELOG.md": "0e91a5fd2cf25a124dc638227c4aa48f51e4e7db",
+        "CHANGELOG.md": "4f46990014b3546a80ab5ea531bc2b64f50b291a",
         "index.d.ts": "1ba908d82f37b11a66fc326a88a79ee6ef965fc7",
         "index.js": "e7798d420641e13b2104408b1cf4df20f67c654e",
-        "package.json": "6f741b6e43ee9ca6ca4a5b59252ac47fb0890ca6"
+        "package.json": "8e7087318a841f9762c4db25b645be7200edc97c"
       },
       "hashOfExternalDependencies": "92e077bcfc370e63",
       "cache": {
@@ -203,7 +203,7 @@
         "remote": false,
         "status": "HIT",
         "source": "LOCAL",
-        "timeSaved": 5666
+        "timeSaved": 5478
       },
       "command": "tsup && vite build && block-tools build-model",
       "cliArguments": [],
@@ -341,7 +341,7 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.test#build",
       "task": "build",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.test",
-      "hash": "92b321f46395e4a8",
+      "hash": "cd4cd316f5d83b66",
       "inputs": {
         "CHANGELOG.md": "2751b9d9c297520bebc429131d31d0dc595426ec",
         "assets/.gitkeep": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
@@ -415,7 +415,7 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.test#test",
       "task": "test",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.test",
-      "hash": "20ffa2548b6fcb88",
+      "hash": "eb95bf77236f35f3",
       "inputs": {
         "CHANGELOG.md": "2751b9d9c297520bebc429131d31d0dc595426ec",
         "assets/.gitkeep": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
@@ -533,7 +533,7 @@
         "remote": false,
         "status": "HIT",
         "source": "LOCAL",
-        "timeSaved": 15023
+        "timeSaved": 14954
       },
       "command": "vue-tsc -b && vite build",
       "cliArguments": [],
@@ -712,7 +712,7 @@
         "remote": false,
         "status": "HIT",
         "source": "LOCAL",
-        "timeSaved": 62742
+        "timeSaved": 61883
       },
       "command": "rm -rf dist && pl-tengo check && pl-tengo build",
       "cliArguments": [],
@@ -850,7 +850,7 @@
   "user": "github-merge-queue[bot]",
   "scm": {
     "type": "git",
-    "sha": "fe6b46c2a7efa602b25759fc45e9f250d52c2b3b",
+    "sha": "60c5c94f601912acbfceec216d09e1fa075249ae",
     "branch": "main"
   }
 }

@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping
 
+## 1.8.28
+
+### Patch Changes
+
+- 717b029: Mark as deprecated again
+
 ## 1.8.27
 
 ### Patch Changes
