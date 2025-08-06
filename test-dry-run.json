@@ -3,7 +3,7 @@
 > PL_PKG_DEV=local turbo run test --dry-run=json
 
 {
-  "id": "30YHz9u8dDEMiUe3FQf71Mi5EMw",
+  "id": "30u7MV86ReijBD02weLpngGaBak",
   "version": "1",
   "turboVersion": "2.4.4",
   "monorepo": true,
@@ -37,12 +37,12 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping#build",
       "task": "build",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping",
-      "hash": "5bd04664b048d8be",
+      "hash": "ea222d9e505b2adc",
       "inputs": {
-        "CHANGELOG.md": "4f46990014b3546a80ab5ea531bc2b64f50b291a",
+        "CHANGELOG.md": "e3b41c8dbc5f89156ffdffd1458f9196728874e1",
         "index.d.ts": "1ba908d82f37b11a66fc326a88a79ee6ef965fc7",
         "index.js": "e7798d420641e13b2104408b1cf4df20f67c654e",
-        "package.json": "8e7087318a841f9762c4db25b645be7200edc97c"
+        "package.json": "fb23072bd01e47b11af79b9d1582f6cf6657b2ed"
       },
       "hashOfExternalDependencies": "92e077bcfc370e63",
       "cache": {
@@ -50,7 +50,7 @@
         "remote": false,
         "status": "HIT",
         "source": "LOCAL",
-        "timeSaved": 1692
+        "timeSaved": 1832
       },
       "command": "rm -rf ./block-pack && block-tools pack",
       "cliArguments": [],
@@ -106,12 +106,12 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping#test",
       "task": "test",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping",
-      "hash": "57bc809794bae50f",
+      "hash": "7c26c72a60e397d5",
       "inputs": {
-        "CHANGELOG.md": "4f46990014b3546a80ab5ea531bc2b64f50b291a",
+        "CHANGELOG.md": "e3b41c8dbc5f89156ffdffd1458f9196728874e1",
         "index.d.ts": "1ba908d82f37b11a66fc326a88a79ee6ef965fc7",
         "index.js": "e7798d420641e13b2104408b1cf4df20f67c654e",
-        "package.json": "8e7087318a841f9762c4db25b645be7200edc97c"
+        "package.json": "fb23072bd01e47b11af79b9d1582f6cf6657b2ed"
       },
       "hashOfExternalDependencies": "92e077bcfc370e63",
       "cache": {
@@ -177,11 +177,11 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.model#build",
       "task": "build",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.model",
-      "hash": "562ad0372de28eb7",
+      "hash": "52f7b74fc5dc842b",
       "inputs": {
-        "CHANGELOG.md": "45de84f159c840fe4f3dd251f1ce2348e38d565b",
+        "CHANGELOG.md": "94406dfa36279fd368ded593cae17d103b18dfb9",
         "eslint.config.mjs": "0c8c7ff451678d3ed2767ddd0d018c90d3317298",
-        "package.json": "30b140bf975678a263a4ed7e536e0edec9db688f",
+        "package.json": "4b2c8b182db97c845bd47aed3a6d014be5fba78d",
         "src/args.ts": "0baaf3e472fd8445b86f2148d41a6f4cfa59bbb7",
         "src/base32-encode.ts": "a8e75f9a9c8936f676f01034cf0d24c387880c2c",
         "src/helpers.ts": "e2ad97ea8026430e71e111de6f0e43bc5ad6a6a6",
@@ -203,7 +203,7 @@
         "remote": false,
         "status": "HIT",
         "source": "LOCAL",
-        "timeSaved": 5478
+        "timeSaved": 5984
       },
       "command": "tsup && vite build && block-tools build-model",
       "cliArguments": [],
@@ -257,11 +257,11 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.model#test",
       "task": "test",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.model",
-      "hash": "5f14702555c24702",
+      "hash": "cbc7805ef5c71e13",
       "inputs": {
-        "CHANGELOG.md": "45de84f159c840fe4f3dd251f1ce2348e38d565b",
+        "CHANGELOG.md": "94406dfa36279fd368ded593cae17d103b18dfb9",
         "eslint.config.mjs": "0c8c7ff451678d3ed2767ddd0d018c90d3317298",
-        "package.json": "30b140bf975678a263a4ed7e536e0edec9db688f",
+        "package.json": "4b2c8b182db97c845bd47aed3a6d014be5fba78d",
         "src/args.ts": "0baaf3e472fd8445b86f2148d41a6f4cfa59bbb7",
         "src/base32-encode.ts": "a8e75f9a9c8936f676f01034cf0d24c387880c2c",
         "src/helpers.ts": "e2ad97ea8026430e71e111de6f0e43bc5ad6a6a6",
@@ -341,16 +341,16 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.test#build",
       "task": "build",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.test",
-      "hash": "cd4cd316f5d83b66",
+      "hash": "d08d544c7dac39a2",
       "inputs": {
-        "CHANGELOG.md": "2751b9d9c297520bebc429131d31d0dc595426ec",
+        "CHANGELOG.md": "969859f002e7c9101f111d5a4b87269760ed68f0",
         "assets/.gitkeep": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
         "assets/expected_results/.gitignore": "fbdfe9aac3993afb2959271dc98175fa567071fe",
         "assets/expected_results/mixcr.sh": "ae9684890fbf724c09777f658a50ba1ecaf402cc",
         "assets/expected_results/pfconv.sh": "69f3b222de8516f6a498dfe57ed55e3a1ebff684",
         "assets/small_data_R1.fastq.gz": "78e126e7f7d6a5a21dff0ce18334fe5cf0cce622",
         "assets/small_data_R2.fastq.gz": "0f80a37feffeba95e018ef60ff1dde37e1ba68f4",
-        "package.json": "7e70dbb49b1232ffb956fffb3d23734afe95120e",
+        "package.json": "cbe28f15e8ee5fb50b22d3b65b647288dd73298e",
         "src/wf.test.ts": "474c841b3d44af598ec0da1d9154f1afb2c65595",
         "test_config.json": "297c77f86aa4e27de9eebc853961a3f95887c85c",
         "tsconfig.json": "64ebfa332d028a50e3ddadaab4ad97b44a191599",
@@ -415,16 +415,16 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.test#test",
       "task": "test",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.test",
-      "hash": "eb95bf77236f35f3",
+      "hash": "84de44416528f8cb",
       "inputs": {
-        "CHANGELOG.md": "2751b9d9c297520bebc429131d31d0dc595426ec",
+        "CHANGELOG.md": "969859f002e7c9101f111d5a4b87269760ed68f0",
         "assets/.gitkeep": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
         "assets/expected_results/.gitignore": "fbdfe9aac3993afb2959271dc98175fa567071fe",
         "assets/expected_results/mixcr.sh": "ae9684890fbf724c09777f658a50ba1ecaf402cc",
         "assets/expected_results/pfconv.sh": "69f3b222de8516f6a498dfe57ed55e3a1ebff684",
         "assets/small_data_R1.fastq.gz": "78e126e7f7d6a5a21dff0ce18334fe5cf0cce622",
         "assets/small_data_R2.fastq.gz": "0f80a37feffeba95e018ef60ff1dde37e1ba68f4",
-        "package.json": "7e70dbb49b1232ffb956fffb3d23734afe95120e",
+        "package.json": "cbe28f15e8ee5fb50b22d3b65b647288dd73298e",
         "src/wf.test.ts": "474c841b3d44af598ec0da1d9154f1afb2c65595",
         "test_config.json": "297c77f86aa4e27de9eebc853961a3f95887c85c",
         "tsconfig.json": "64ebfa332d028a50e3ddadaab4ad97b44a191599",
@@ -494,12 +494,12 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.ui#build",
       "task": "build",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.ui",
-      "hash": "dcd01a67591c98a7",
+      "hash": "583b03ebd9cd8119",
       "inputs": {
-        "CHANGELOG.md": "a0c37b3ff0f76feac0b72095cd303af10449bdf1",
+        "CHANGELOG.md": "7723a7ca27417f120e41e2350653bf5e81bef4bd",
         "eslint.config.mjs": "30e2871b6d4cc4776ac969c3a0e034a23e2fe766",
         "index.html": "e37ab12ef6090a1380237b55964f225b48d02cfc",
-        "package.json": "1325b4a5c3caadd4266afe8485fc0fd2c0ac18c8",
+        "package.json": "ae61aaa05c7190a615f73604647d43a368d8de1b",
         "src/MainPage.vue": "2ee936c80ba9ed101b9c316a6521a772244523d8",
         "src/MainPageWrapper.vue": "2c640972eb002ddca80fd79e8f91981684bdb269",
         "src/SampleReportPanel.vue": "87cf2d39b3d2e5d72d83c9dc005d9abef055f16c",
@@ -533,7 +533,7 @@
         "remote": false,
         "status": "HIT",
         "source": "LOCAL",
-        "timeSaved": 14954
+        "timeSaved": 15261
       },
       "command": "vue-tsc -b && vite build",
       "cliArguments": [],
@@ -587,12 +587,12 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.ui#test",
       "task": "test",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.ui",
-      "hash": "e2b6ee9dc62b5710",
+      "hash": "971d0e94c3b5f7ed",
       "inputs": {
-        "CHANGELOG.md": "a0c37b3ff0f76feac0b72095cd303af10449bdf1",
+        "CHANGELOG.md": "7723a7ca27417f120e41e2350653bf5e81bef4bd",
         "eslint.config.mjs": "30e2871b6d4cc4776ac969c3a0e034a23e2fe766",
         "index.html": "e37ab12ef6090a1380237b55964f225b48d02cfc",
-        "package.json": "1325b4a5c3caadd4266afe8485fc0fd2c0ac18c8",
+        "package.json": "ae61aaa05c7190a615f73604647d43a368d8de1b",
         "src/MainPage.vue": "2ee936c80ba9ed101b9c316a6521a772244523d8",
         "src/MainPageWrapper.vue": "2c640972eb002ddca80fd79e8f91981684bdb269",
         "src/SampleReportPanel.vue": "87cf2d39b3d2e5d72d83c9dc005d9abef055f16c",
@@ -684,11 +684,11 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.workflow#build",
       "task": "build",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.workflow",
-      "hash": "b4042cda6be1098e",
+      "hash": "1f1e43770eedcba2",
       "inputs": {
-        "CHANGELOG.md": "4e9830bfd8fa2f760985ac4af3b2c267bc47c87f",
+        "CHANGELOG.md": "306f505bdf76b465a0729f1577cb2436b4509116",
         "format.el": "b168a1ac097463794e06d0e92c1e11da73486887",
-        "package.json": "0ee1807fc38199ad1c6318211b377f300c4462bd",
+        "package.json": "81e60a9209fc0fb9df0b9764065ac550a5baabdd",
         "scripts/build-static.mjs": "060c96cd05ad47d2733fcfcea37f941a70804ef3",
         "src/calculate-pfconv-params.tpl.tengo": "480f48e9e815588007daa4a4a05c86f06290e873",
         "src/check-feature.lib.tengo": "5ca4898562624bd86e4e17875529ea52fd8bc922",
@@ -712,7 +712,7 @@
         "remote": false,
         "status": "HIT",
         "source": "LOCAL",
-        "timeSaved": 61883
+        "timeSaved": 62493
       },
       "command": "rm -rf dist && pl-tengo check && pl-tengo build",
       "cliArguments": [],
@@ -764,11 +764,11 @@
       "taskId": "@platforma-open/milaboratories.mixcr-clonotyping.workflow#test",
       "task": "test",
       "package": "@platforma-open/milaboratories.mixcr-clonotyping.workflow",
-      "hash": "60acd4e6dfcccfe2",
+      "hash": "8b66c8c557170c3d",
       "inputs": {
-        "CHANGELOG.md": "4e9830bfd8fa2f760985ac4af3b2c267bc47c87f",
+        "CHANGELOG.md": "306f505bdf76b465a0729f1577cb2436b4509116",
         "format.el": "b168a1ac097463794e06d0e92c1e11da73486887",
-        "package.json": "0ee1807fc38199ad1c6318211b377f300c4462bd",
+        "package.json": "81e60a9209fc0fb9df0b9764065ac550a5baabdd",
         "scripts/build-static.mjs": "060c96cd05ad47d2733fcfcea37f941a70804ef3",
         "src/calculate-pfconv-params.tpl.tengo": "480f48e9e815588007daa4a4a05c86f06290e873",
         "src/check-feature.lib.tengo": "5ca4898562624bd86e4e17875529ea52fd8bc922",
@@ -850,7 +850,7 @@
   "user": "github-merge-queue[bot]",
   "scm": {
     "type": "git",
-    "sha": "60c5c94f601912acbfceec216d09e1fa075249ae",
+    "sha": "6a9725fa4d53fb8090657816043c828e7b64b419",
     "branch": "main"
   }
 }
