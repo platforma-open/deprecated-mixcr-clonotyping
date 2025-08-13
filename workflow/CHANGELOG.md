@@ -1,5 +1,11 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.workflow
 
+## 1.19.3
+
+### Patch Changes
+
+- 35d9180: Removed from Add Block
+
 ## 1.19.2
 
 ### Patch Changes

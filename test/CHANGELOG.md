@@ -1,5 +1,13 @@
 # @platforma-open/milaboratories.mixcr-clonotyping.test
 
+## 1.6.3
+
+### Patch Changes
+
+- 35d9180: Removed from Add Block
+- Updated dependencies [35d9180]
+  - @platforma-open/milaboratories.mixcr-clonotyping.model@1.9.3
+
 ## 1.6.2
 
 ### Patch Changes
